@@ -6,3 +6,4 @@ file3"
 
 for f in $FILES ; do somethingToThe/$f ; done
 
+find . -name foo.txt -print
