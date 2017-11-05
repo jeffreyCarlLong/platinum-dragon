@@ -1,4 +1,4 @@
-### Data Science 
+### Modeling Features in Data Science
 
 #### Full Stack Path
 
