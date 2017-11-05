@@ -1,39 +1,4 @@
-## Machine Learning Notes
-
-Reading a blog,  [Friendly Machine Learning](http://engineering.indeedblog.com/blog/2017/06/friendly-machine-learning/)
-about [John Langford's](https://github.com/JohnLangford) 
-[Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/wiki).
-This paper, [Normalized online learning](https://arxiv.org/pdf/1305.6646.pdf)
-is pretty amazing.
-FIrst note, use GitHub wikis more. :)
-
-### Going down the rabbit hole... I may choose to look down a few worm holes.
-
-* [Twitter sentiment analysis](https://github.com/indeedeng/vowpal-wabbit-java/blob/master/src/test/java/com/indeed/vw/wrapper/integration/tests/TestOnTwitterSentimentDataset.java)
-delves into natural language processing (NLP). 
-One parameter to toggle is n-grams. If a bigram model is used, 
-the conditional probability of a given word is approximated 
-by the previous word. The strategy that a word depends only 
-on the previous is known as the Markov assumption.
-
-Estimating an n-gram probability with 
-maximum likelihood estimation (MLE) is 
-done by normalizing the counts from a corpus
-to a range between 0 and 1.
-
-In practice trigram models are more common. Here's a 
-great paper on these topics [Language Modeling with N-grams](https://web.stanford.edu/~jurafsky/slp3/4.pdf).
-
-
-## Indeed Data Science Group Tech Talks
-
-### [From 1 to 1 Billion: Evolution of a Document Serving System](http://engineering.indeedblog.com/talks/1-1-billion-evolution-document-serving-system/)
-
-### [How to Get a Job 35 Million Times a Day Using RabbitMQ](http://engineering.indeedblog.com/talks/get-job-35-million-times-day-using-rabbitmq/)
-
-### [From Data to Deployment- Full Stack Data Science](http://engineering.indeedblog.com/talks/data-to-deployment/)
-
-Presented by Ben Link a data scientist at Indeed. Notes from his talk follow. 
+### Data Science 
 
 #### Full Stack Path
 
@@ -155,9 +120,27 @@ Awareness of Tokyo, Seattle, SF, Austin.
   Use feature monitoring tool to determine feature stability.
   Or choose less sensitive features.
 
-### [Managing Experiments and Behavior Dynamically with Proctor](http://engineering.indeedblog.com/talks/managing-experiments-behavior-dynamically-proctor/)
+#### Sources
+
+##### [Data to Deployment- Full Stack Data Science](http://engineering.indeedblog.com/talks/data-to-deployment/)
+
+Notes from Ben Link.
+
+##### [Managing Experiments and Behavior Dynamically with Proctor](http://engineering.indeedblog.com/talks/managing-experiments-behavior-dynamically-proctor/)
 
 * A/B Testing is a bake-off between two versions of 
 a web page. The one with the best conversion rate wins.
+
+#### Machine Learning Notes
+
+Read a blog,  [Friendly Machine Learning](http://engineering.indeedblog.com/blog/2017/06/friendly-machine-learning/)
+about [John Langford's](https://github.com/JohnLangford) 
+[Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/wiki).
+This paper, [Normalized online learning](https://arxiv.org/pdf/1305.6646.pdf)
+is pretty amazing.
+
+Last note: use GitHub wikis more. :)
+
+#### Going down the rabbit hole... I may choose to look down a few worm holes.
 
 
