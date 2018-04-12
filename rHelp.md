@@ -25,7 +25,9 @@ rbind,
 separate, 
 spread, 
 grepl, 
-and substr. 
+substr,
+separate_rows,
+drop_na
 
 This file is meant to be a quick reference for a programmer 
 who has used these functions before, and just needs a reminder of 
@@ -99,4 +101,7 @@ df <- filter(df, !grepl('ID1|ID2|ID3',idVar))
 df$\`The Var\` <- substr(as.character(df$\`The Var\`),index1,index2)
 
 ### Separate delimited in several columns into separate rows and fill other variables
-df.split <- separate_rows(df, delimVar1, delimVar2, delimVar3, delimVar4, sep =  ";", convert = FALSE)
+dfSplit <- separate_rows(df, delimVar1, delimVar2, delimVar3, delimVar4, sep =  ";", convert = FALSE)
+
+### Remove rows which have NAs in one (key) variable
+dfRmNa <- drop_na(df, "Var")
