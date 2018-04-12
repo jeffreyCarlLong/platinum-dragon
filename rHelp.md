@@ -97,3 +97,6 @@ df <- filter(df, !grepl('ID1|ID2|ID3',idVar))
 
 ### Cut up regular values
 df$\`The Var\` <- substr(as.character(df$\`The Var\`),index1,index2)
+
+### Separate delimited in several columns into separate rows and fill other variables
+df.split <- separate_rows(df, delimVar1, delimVar2, delimVar3, delimVar4, sep =  ";", convert = FALSE)
