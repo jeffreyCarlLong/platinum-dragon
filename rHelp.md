@@ -105,3 +105,8 @@ dfSplit <- separate_rows(df, delimVar1, delimVar2, delimVar3, delimVar4, sep =  
 
 ### Remove rows which have NAs in one (key) variable
 dfRmNa <- drop_na(df, "Var")
+
+### Bash sorting in RStudio
+bash engine='bash'
+
+sort -k1,1 /Users/jlong/Documents/File.txt > /Users/jlong/Documents/File.sorted.txt
