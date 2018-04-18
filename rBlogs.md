@@ -22,6 +22,7 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Broad Fire Cloud** | TCGA NGS Processing using Jupyter Notebook for TensorFlow | [Documentation](https://software.broadinstitute.org/firecloud/documentation/article?id=11603)
 **Lumpers and Splitters: Tensions in Taxonomies** | Songs of Himalayan greenish warblers | [Stitch Fix blog](https://multithreaded.stitchfix.com/blog/2018/04/05/lumpers-and-splitters/)
 **R Packages by Hadley Wickham** | Building packages | [Advanced R](http://r-pkgs.had.co.nz/description.html)
 **Writing an R package from scratch** | Hilary Parker's seminal reference text | [Not So Standard Deviations](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
