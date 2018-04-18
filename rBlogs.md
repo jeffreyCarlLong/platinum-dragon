@@ -4,6 +4,7 @@ The following is a list of blogs and resources which I discovered on my machine 
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Machine Learning Modeling in R** | Cheat sheet | [The R Trader](http://www.thertrader.com/wp-content/uploads/2018/03/Picture3.jpg)
 **scikit-learn Clustering** | sklearn metrics datasets numpy clustering | [Documentation](http://scikit-learn.org/stable/modules/clustering.html)
 **TensorFlow for Poets** | Python Notebook for ML | [Gist](https://gist.github.com/bourdakos1/817611ebfe0d72a027ced9b072ec5c87)
 **Google Calab** | Train your ML Model 4 FREE | [Upload Python Notebook](https://colab.research.google.com/notebooks/welcome.ipynb)
