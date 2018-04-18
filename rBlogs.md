@@ -4,6 +4,7 @@ The following is a list of blogs and resources which I discovered on my machine 
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**scikit-learn Clustering** | sklearn metrics datasets numpy clustering | [Documentation](http://scikit-learn.org/stable/modules/clustering.html)
 **TensorFlow for Poets** | Python Notebook for ML | [Gist](https://gist.github.com/bourdakos1/817611ebfe0d72a027ced9b072ec5c87)
 **Google Calab** | Train your ML Model 4 FREE | [Upload Python Notebook](https://colab.research.google.com/notebooks/welcome.ipynb)
 **Train Your Machine Learning Models on Google’s GPUs for Free — Forever** | Google Collab | [Hackernoon](https://hackernoon.com/train-your-machine-learning-models-on-googles-gpus-for-free-forever-a41bd309d6ad)
@@ -21,6 +22,7 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Lumpers and Splitters: Tensions in Taxonomies** | Songs of Himalayan greenish warblers | [Stitch Fix blog](https://multithreaded.stitchfix.com/blog/2018/04/05/lumpers-and-splitters/)
 **R Packages by Hadley Wickham** | Building packages | [Advanced R](http://r-pkgs.had.co.nz/description.html)
 **Writing an R package from scratch** | Hilary Parker's seminal reference text | [Not So Standard Deviations](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
 **Scraping Javascript websites in R** | system calls | [blog.brooke.science](http://blog.brooke.science/posts/scraping-javascript-websites-in-r/)
