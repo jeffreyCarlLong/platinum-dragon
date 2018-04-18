@@ -23,6 +23,7 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Data Visualization Website with Shiny** | Box, barplots, plus from csv(s) | [R Code and App](https://r-video-tutorial.blogspot.com/2018/03/data-visualization-website-with-shiny.html)
 **Broad Fire Cloud** | TCGA NGS Processing using Jupyter Notebook for TensorFlow | [Documentation](https://software.broadinstitute.org/firecloud/documentation/article?id=11603)
 **Lumpers and Splitters: Tensions in Taxonomies** | Songs of Himalayan greenish warblers | [Stitch Fix blog](https://multithreaded.stitchfix.com/blog/2018/04/05/lumpers-and-splitters/)
 **R Packages by Hadley Wickham** | Building packages | [Advanced R](http://r-pkgs.had.co.nz/description.html)
