@@ -1,8 +1,4 @@
-# Machine Learning Blogs Nat
-## Jeffrey Long
-## 3/27/2018
-
-## The Critical ML Path
+# Machine Learning Blogs Nat AKA The Critical Path
 
 The following is a list of blogs and resources which I discovered on my machine learning (ML) journey.
 
