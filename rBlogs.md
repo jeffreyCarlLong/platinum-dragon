@@ -1,16 +1,8 @@
----
-title: "Machine Learning Blogs Nat"
-author: "Jeffrey Long"
-date: "3/27/2018"
-output: html_document
----
+# Machine Learning Blogs Nat
+## Jeffrey Long
+## 3/27/2018
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-## theCriticalMlPath
+## The Critical ML Path
 
 The following is a list of blogs and resources which I discovered on my machine learning (ML) journey.
 
@@ -29,7 +21,7 @@ Title  |  Details |  Website
 **Deep Learning from first principles in Python, R and Octave** | Decision boundary with hidden units i and learning rate j | [Giga Thoughts Part I](https://gigadom.wordpress.com/2018/01/04/deep-learning-from-basic-principles-in-python-r-and-octave-part-1/), and [Part II](https://www.r-bloggers.com/deep-learning-from-first-principles-in-python-r-and-octave-part-2/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+RBloggers+%28R+bloggers%29)
 
 
-## somethinElseR
+## Somethin Else R
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
