@@ -4,6 +4,7 @@ The following is a list of blogs and resources which I discovered on my machine 
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Machine Learning Yearning** | Andrew Ng | [Book Chapters 1-14](https://gallery.mailchimp.com/dc3a7ef4d750c0abfc19202a3/files/704291d2-365e-45bf-a9f5-719959dfe415/Ng_MLY01.pdf)
 **Machine Learning Crash Course** | TensorFlow APIs | [Google Course](https://developers.google.com/machine-learning/crash-course/)
 **Machine Learning Modeling in R** | Cheat sheet | [The R Trader](http://www.thertrader.com/wp-content/uploads/2018/03/Picture3.jpg)
 **scikit-learn Clustering** | sklearn metrics datasets numpy clustering | [Documentation](http://scikit-learn.org/stable/modules/clustering.html)
