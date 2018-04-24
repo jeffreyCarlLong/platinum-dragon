@@ -78,7 +78,7 @@ newDf <- df %>%
   group_by(groupVar) %>%
   summarise(df = mean(result))
 
-### Remove commas
+### Remove commas, AKA Replace commas with nothing
 df$\`Some Variable\` <- gsub(",", "", df$\`Some Variable\`)
 
 ### Read in Excel file
