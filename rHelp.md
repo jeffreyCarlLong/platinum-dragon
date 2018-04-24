@@ -27,7 +27,9 @@ spread,
 grepl, 
 substr,
 separate_rows,
-drop_na
+drop_na,
+bash engine sort,
+t.test
 
 This file is meant to be a quick reference for a programmer 
 who has used these functions before, and just needs a reminder of 
@@ -110,3 +112,10 @@ dfRmNa <- drop_na(df, "Var")
 bash engine='bash'
 
 sort -k1,1 /Users/jlong/Documents/File.txt > /Users/jlong/Documents/File.sorted.txt
+
+### t-Test for Gene Mutation of Interest given IC50 scores for cell lines
+d.filt <- filter(d, d$Gene == "GoI")
+
+t.test(d.filt$IC50~d.filt$Mutated)
+
+
