@@ -59,14 +59,17 @@ df$\`newVariable\` <- ifelse(is.na(df$variable),FALSE,TRUE)
 ### Create new variable
 df$newVar <- paste("Year", df$year, "Month", df$month, "Day", df$\`The Day\`)
 
-### Join two dataframes
+### Join two dataframes (ie more columns)
 df <- left_join(df, altDf, by = c("Var1" = "Var1", "Var2" = "Var2"))
 
-### Sum samples within a group
-df <- aggregate(df$varToFunctionalize, by df["varToGroup"], FUN=mean)
+### Adding dataframes together (ie more rows)
+dfBound <- rbind(df1, df2)
 
 ### Parse out columns of interest
 dfSvelte <- select(dfSvelte, 1:42,45)
+
+### Pulling out columns
+df <- df[,c("Col 1", "Col 2", "Col 3")]
 
 ### Summarise with group_by
 df <- df %>% 
@@ -78,17 +81,14 @@ newDf <- df %>%
   group_by(groupVar) %>%
   summarise(df = mean(result))
 
+### Sum samples within a group
+df <- aggregate(df$varToFunctionalize, by df["varToGroup"], FUN=mean)
+
 ### Remove commas, AKA Replace commas with nothing
 df$\`Some Variable\` <- gsub(",", "", df$\`Some Variable\`)
 
 ### Read in Excel file
 df <- read_excel("/Path/to/file.xlsx")
-
-### Pulling out columns
-df <- df[,c("Col 1", "Col 2", "Col 3")]
-
-### Adding dataframes together
-dfBound <- rbind(df1, df2)
 
 ### Splitting a variable column
 df <- separate(df, \`Var Name\`, c("Token 1", "Token 2", "Token 3"), sep = "_")
