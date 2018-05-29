@@ -106,7 +106,7 @@ ADD column_name datatype;
     # e.g. 
     ALTER TABLE Salesperson
     ADD DateOfBirth year;
-# Delet Variable (column) from Table
+# Delete Variable (column) from Table
 ALTER TABLE table_name
 DROP COLUMN column_name;
 # Modify Column
