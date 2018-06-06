@@ -139,8 +139,6 @@ about [John Langford's](https://github.com/JohnLangford)
 This paper, [Normalized online learning](https://arxiv.org/pdf/1305.6646.pdf)
 is pretty amazing.
 
-Last note: use GitHub wikis more. :)
+#### Going down the rabbit hole... choose to look down a few worm holes.
 
-#### Going down the rabbit hole... I may choose to look down a few worm holes.
-
-
+And use GitHub wikis more. :)
