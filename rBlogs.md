@@ -4,6 +4,8 @@ The following is a list of blogs and resources which I discovered on my machine 
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Meetup slides: Introducing Deep Learning with Keras** | General Keras slides | [Shirin's playgRound](https://shirinsplayground.netlify.com/2018/04/ruhrpy_meetup_2018_slides/)
+**How to call bullshit on AI companies (aka a short lesson on recall)** | precision, recall, accuracy | [Cartesian Faith](https://cartesianfaith.com/2018/04/10/how-to-call-bullshit-on-ai-companies-aka-a-short-lesson-on-recall/)
 **ML models: What they can’t learn?** | True model plots | [R Bloggers](https://www.r-bloggers.com/ml-models-what-they-cant-learn/)
 **Automated Feature Selection Using bounceR** | [GitHub Repo](https://github.com/STATWORX/bounceR) | [Statworx](https://www.statworx.com/de/blog/data-science/automated-feature-selection-using-bouncer/)
 **Machine Learning Yearning** | Andrew Ng | [Book Chapters 1-14](https://gallery.mailchimp.com/dc3a7ef4d750c0abfc19202a3/files/704291d2-365e-45bf-a9f5-719959dfe415/Ng_MLY01.pdf)
@@ -27,6 +29,8 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Writing better R functions** | ggtitle(bquote("Crosstabs"\~.(dfname)\*.(aaa)\~"by"\*.(bbb))); deparse, substitute function, check 4 loaded library | [Chuck Powell](https://ibecav.github.io/betterfunctions/)
+**Writing better R functions part two** | plot types dodge (side), stack, fill (percentage) | [Chuck Powell](https://ibecav.github.io/betterfunctions2/)
 **15 Types of Regression You Should Know** | R lm fit | [Listen Data](https://www.listendata.com/2018/03/regression-analysis.html)
 **Data Visualization Website with Shiny** | Box, barplots, plus from csv(s) | [R Code and App](https://r-video-tutorial.blogspot.com/2018/03/data-visualization-website-with-shiny.html)
 **Broad Fire Cloud** | TCGA NGS Processing using Jupyter Notebook for TensorFlow | [Documentation](https://software.broadinstitute.org/firecloud/documentation/article?id=11603)
