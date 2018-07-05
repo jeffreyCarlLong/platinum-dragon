@@ -29,6 +29,7 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Why you should master the small multiple chart** | facet_wrap(~cylinders), facet_grid(Student ~ Married), or facet_wrap(~key, scales = 'free')| [Sharp Sight](https://www.sharpsightlabs.com/blog/master-small-multiple/)
 **Writing better R functions** | ggtitle(bquote("Crosstabs"\~.(dfname)\*.(aaa)\~"by"\*.(bbb))); deparse, substitute function, check 4 loaded library | [Chuck Powell](https://ibecav.github.io/betterfunctions/)
 **Writing better R functions part two** | plot types dodge (side), stack, fill (percentage) | [Chuck Powell](https://ibecav.github.io/betterfunctions2/)
 **15 Types of Regression You Should Know** | R lm fit | [Listen Data](https://www.listendata.com/2018/03/regression-analysis.html)
