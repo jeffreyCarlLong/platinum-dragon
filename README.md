@@ -9,7 +9,7 @@ Every Shiny app is maintained by a computer running R.
 
 User interface (UI), server instructions are two required components.
 
-## Shiny App Template
+## Minimal Shiny App
 
 The minimal code for a Shiny app. 
 
@@ -21,6 +21,8 @@ server <- function(input, output) {}
 
 shinyApp(ui = ui, server = server)
 ```
+
+## Three Function Composition
 
 Three types of functions: input, output and server.
 
@@ -46,13 +48,17 @@ Add elements to your app as arguments to fluidPage().
 
 ```{r shinyTemplate3, eval = FALSE}
 library(shiny)
-ui <- fluidPage("My Shiny App"
-  # *Input() functions
-  sliderInput(inputId = "num",
-              label = "Choose a number",
-              value = 25, min = 1, max = 100)
-  # *Output() functions
+ui <- fluidPage(
+  titlePanel("My Shiny App"),
+  sidebarLayout(                                   # Add side panel for inputs
+    sidebarPanel(
+                                                   # *Input() functions
+      sliderInput(inputId = "num",
+                  label = "Choose a number",
+                  value = 25, min = 1, max = 100)
+    )
   )
+)
 
 server <- function(input, output) {}
 
@@ -67,19 +73,24 @@ To display reactive results, add to fluidPage() with an *Output() function.
 
 ```{r shinyTemplate4, eval = FALSE}
 library(shiny)
-ui <- fluidPage("My Shiny App"
-  # *Input() functions
-  sliderInput(inputId = "num",
-              label = "Choose a number",
-              value = 25, min = 1, max = 100), # Add commas 
-                                               # between
-                                               # arguments
-  # *Output() functions
-  plotOutput("hist")                           # Adds a space 
-                                               # in ui for R object.
-                                               # Build object
-                                               # in server func.
+ui <- fluidPage(
+  titlePanel("My Shiny App"),
+  sidebarLayout(                                   # Add side panel for inputs
+    sidebarPanel(
+                                                   # *Input() functions
+      sliderInput(inputId = "num",
+                  label = "Choose a number",
+                  value = 25, min = 1, max = 100)
+    ),
+    mainPanel(
+                                                   # *Output() functions
+      plotOutput(outputId = "hist")                # Adds an output space 
+                                                   # in ui for R object.
+                                                   # Build object
+                                                   # in server func.
+    )
   )
+)
 
 server <- function(input, output) {}
 
@@ -98,21 +109,28 @@ Rules to writing server functions:
 
 <img src="renderFunctions.png" width="400"/>
 
+#### Shiny App Template
+
 ```{r shinyTemplate5, eval = FALSE}
 library(shiny)
-ui <- fluidPage("My Shiny App"
-  # *Input() functions
-  sliderInput(inputId = "num",
-              label = "Choose a number",
-              value = 25, min = 1, max = 100), # Add commas 
-                                               # between
-                                               # arguments
-  # *Output() functions
-  plotOutput("hist")                           # Adds a space 
-                                               # in ui for R object.
-                                               # Build object
-                                               # in server func.
+ui <- fluidPage(
+  titlePanel("My Shiny App"),
+  sidebarLayout(                                   # Add side panel for inputs
+    sidebarPanel(
+                                                   # *Input() functions
+      sliderInput(inputId = "num",
+                  label = "Choose a number",
+                  value = 25, min = 1, max = 100)
+    ),
+    mainPanel(
+                                                   # *Output() functions
+      plotOutput(outputId = "hist")                # Adds an output space 
+                                                   # in ui for R object.
+                                                   # Build object
+                                                   # in server func.
+    )
   )
+)
 
 server <- function(input, output) { 
   output$hist <- renderPlot({                  # Can add R scripts and code between render {}
@@ -122,8 +140,6 @@ server <- function(input, output) {
                                                # num-num causes automatic reativity!
   })                                           # Save object to output$
                                                # Referenced in plotOutput("")
-    
-    
 }
 
 shinyApp(ui = ui, server = server)
