@@ -88,6 +88,7 @@ shinyApp(ui = ui, server = server)
 
 ### Server Functions
 
+Telling the server how to assemble inputs and outputs. 
 Rules to writing server functions:
 
 * Save objects to display to output$ 
