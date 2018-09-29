@@ -114,8 +114,8 @@ ui <- fluidPage("My Shiny App"
                                                # in server func.
   )
 
-server <- function(input, output) {
-  output$hist <- renderPlot({
+server <- function(input, output) { 
+  output$hist <- renderPlot({                  # Can add R scripts and code between render {}
     title <- "100 Random Normal Values"
     hist(rnorm(input$num), main = title)       # Code that builds obj.
                                                # input$num from sliderInput in UI, num-num, :)
