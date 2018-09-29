@@ -46,7 +46,7 @@ shinyApp(ui = ui, server = server)
 
 Add elements to your app as arguments to fluidPage().
 
-<img src="/Users/jeffreylong/R/shiny/inputFunctions.png" width="650"/>
+<img src="inputFunctions.png" width="650"/>
 
 ```{r shinyTemplate3, eval = FALSE}
 library(shiny)
@@ -67,7 +67,7 @@ shinyApp(ui = ui, server = server)
 
 To display reactive results, add to fluidPage() with an *Output() function. 
 
-<img src="/Users/jeffreylong/R/shiny/outputFunctions.png" width="400"/>
+<img src="outputFunctions.png" width="400"/>
 
 ```{r shinyTemplate4, eval = FALSE}
 library(shiny)
@@ -99,7 +99,7 @@ Rules to writing server functions:
 * Build objects to display with render*()
 * Access input values with input$
 
-<img src="/Users/jeffreylong/R/shiny/renderFunctions.png" width="400"/>
+<img src="renderFunctions.png" width="400"/>
 
 ```{r shinyTemplate5, eval = FALSE}
 library(shiny)
