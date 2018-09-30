@@ -153,3 +153,25 @@ One directory with every file the app needs:
 * datasets, images, css, helper scripts, etc.
 Note- you must use exact name, app.R.
 
+
+### Deploy shinyapps.io
+
+[http://shiny.rstudio.com/articles/shinyapps.html](http://shiny.rstudio.com/articles/shinyapps.html)
+
+```{r eval=FALSE}
+# Install rsconnect package
+if (!require("devtools"))
+  install.packages("devtools")
+devtools::install_github("rstudio/rsconnect")
+
+# Set up your shinyapps.io account to recognize your computer
+rsconnect::setAccountInfo(name='jefflong',
+			  token='57EB65311F1075B42840A7E9AF80368B',
+			  secret='<secret>')
+
+# When ready to deploy app, point rsconnect to the app dir
+library(rsconnect)
+rsconnect::deployApp('/Users/jeffreylong/R/shiny/tutorialApp/shinyTutorial')
+```
+
+[https://jefflong.shinyapps.io/shinytutorial/](https://jefflong.shinyapps.io/shinytutorial/)
