@@ -175,3 +175,63 @@ rsconnect::deployApp('/Users/jeffreylong/R/shiny/tutorialApp/shinyTutorial')
 ```
 
 [https://jefflong.shinyapps.io/shinytutorial/](https://jefflong.shinyapps.io/shinytutorial/)
+
+
+
+### Reactivity
+
+Build reactive output to display in UI with render*(). E.g.
+```{r eval=FALSE}
+renderPlot(   { hist(rnorm(input$numNum)) })
+```
+
+When notified that it is invalid, the object created by 
+a render*() function will rerun the entire block of code associated with it.
+
+
+```{r shinyTemplate7, eval = FALSE}
+library(shiny)
+
+ui <- fluidPage(
+  titlePanel("Jeff Long's Reactive Shiny App"),
+  sidebarLayout(                                   # Add side panel for inputs
+    sidebarPanel(
+                                                   # *Input() functions
+      sliderInput(inputId = "numNum",              # Input value of Slider
+                  label = "Choose a number",
+                  value = 25, min = 1, max = 100)
+    ),
+    mainPanel(                                     # *Output() functions
+      verbatimTextOutput(outputId = "stats"),
+      plotOutput(outputId = "hist")                # Adds an output space 
+                                                   # in ui for R object.
+                                                   # Build object
+                                                   # in server func.
+    )
+  )
+)
+
+server <- function(input, output) { 
+  data <- reactive({                           # To sync data across multiple
+                                               # outputs. data is a function and
+                                               # must be referred to as data()
+    rnorm(input$numNum)
+  })
+  output$stats <- renderPrint({
+    summary(data())
+  })
+  output$hist <- renderPlot({                  # Reactive function handles reactive
+                                               # value from *Input() function.
+                                               # Can add R scripts and 
+                                               # code between render {}
+    title <- paste(input$numNum, " Random Normal Values")
+    hist(data(), main = title)                 # Code that builds obj.
+                                               # input$num from sliderInput 
+                                               # in UI, num-num, :)
+                                               # num-num causes automatic reativity!
+  })                                           # Save object to output$
+                                               # Referenced in plotOutput("")
+}
+
+shinyApp(ui = ui, server = server)
+```
