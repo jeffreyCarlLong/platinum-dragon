@@ -327,10 +327,10 @@ shinyApp(ui = ui, server = server)
 
 [https://bootswatch.com/cerulean/](https://bootswatch.com/cerulean/)
 
-The following are some CSS pseudo-code.
 
 ```{r eval=FALSE}
 <head>
+  <link type="text/css" rel="stylesheet" href="bootswatch-cerulean.css"/>
   <style>
     li {
       color:purple;
@@ -340,6 +340,7 @@ The following are some CSS pseudo-code.
       color:blue;
     }
 
+    
     #dark {
       color:navy;
     }
@@ -347,6 +348,8 @@ The following are some CSS pseudo-code.
 </head>
  
 <div>
+  
+<div class="container-fluid">
   <h1>CSS examples</h1>
   <p>This webpage uses...
   </p>
@@ -358,6 +361,8 @@ The following are some CSS pseudo-code.
   </ol>
 </div>
 ```
+
+<img src="cssExample.png" width=300>
 
 Place .css files in the www folder of your app dir.
 To get the CSS to be used by Shiny, try one of the following.
