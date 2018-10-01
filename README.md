@@ -9,7 +9,9 @@ Every Shiny app is maintained by a computer running R.
 
 User interface (UI), server instructions are two required components.
 
-## Minimal Shiny App
+
+
+## Shiny App Template
 
 The minimal code for a Shiny app. 
 
@@ -21,8 +23,6 @@ server <- function(input, output) {}
 
 shinyApp(ui = ui, server = server)
 ```
-
-## Three Function Composition
 
 Three types of functions: input, output and server.
 
@@ -40,6 +40,8 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 ```
 
+
+
 ### Shiny Input Functions
 
 Add elements to your app as arguments to fluidPage().
@@ -48,22 +50,20 @@ Add elements to your app as arguments to fluidPage().
 
 ```{r shinyTemplate3, eval = FALSE}
 library(shiny)
-ui <- fluidPage(
-  titlePanel("My Shiny App"),
-  sidebarLayout(                                   # Add side panel for inputs
-    sidebarPanel(
-                                                   # *Input() functions
-      sliderInput(inputId = "num",
-                  label = "Choose a number",
-                  value = 25, min = 1, max = 100)
-    )
+ui <- fluidPage("My Shiny App"
+  # *Input() functions
+  sliderInput(inputId = "num",
+              label = "Choose a number",
+              value = 25, min = 1, max = 100)
+  # *Output() functions
   )
-)
 
 server <- function(input, output) {}
 
 shinyApp(ui = ui, server = server)
 ```
+
+
 
 ### Shiny Output Functions
 
@@ -73,29 +73,25 @@ To display reactive results, add to fluidPage() with an *Output() function.
 
 ```{r shinyTemplate4, eval = FALSE}
 library(shiny)
-ui <- fluidPage(
-  titlePanel("My Shiny App"),
-  sidebarLayout(                                   # Add side panel for inputs
-    sidebarPanel(
-                                                   # *Input() functions
-      sliderInput(inputId = "num",
-                  label = "Choose a number",
-                  value = 25, min = 1, max = 100)
-    ),
-    mainPanel(
-                                                   # *Output() functions
-      plotOutput(outputId = "hist")                # Adds an output space 
-                                                   # in ui for R object.
-                                                   # Build object
-                                                   # in server func.
-    )
+ui <- fluidPage("My Shiny App"
+  # *Input() functions
+  sliderInput(inputId = "num",
+              label = "Choose a number",
+              value = 25, min = 1, max = 100) # Add commas 
+                                               # between
+                                               # arguments
+  # *Output() functions
+  plotOutput("hist")                           # Adds a space 
+                                               # in ui for R object.
+                                               # Build object
+                                               # in server func.
   )
-)
 
 server <- function(input, output) {}
 
 shinyApp(ui = ui, server = server)
 ```
+
 
 
 ### Server Functions
@@ -107,7 +103,7 @@ Rules to writing server functions:
 * Build objects to display with render*()
 * Access input values with input$
 
-<img src="/Users/jeffreylong/R/shiny/renderFunctions.png" width="400"/>
+<img src="renderFunctions.png" width="400"/>
 
 ```{r shinyTemplate5, eval = FALSE}
 library(shiny)
@@ -234,7 +230,6 @@ server <- function(input, output) {
                                                # value from *Input() function.
     title <- paste(input$numNum,               # Can add R scripts and 
              " Random Normal Values")          # code between render {}
-
     hist(data(), main = title)                 # Code that builds obj.
                                                # input$num from sliderInput 
                                                # in UI, num-num, :)
@@ -250,11 +245,16 @@ shinyApp(ui = ui, server = server)
 
 Use tags() to add static content to your Shiny app.
 
+```{r}
+library(shiny)
+names(tags)
+```
+
 Make a "www" directory, deposit images, no need to reference dir in call.
 
-```{r htmlR}
-names(tags)
-fluidPage(
+```{r htmlR, eval=FALSE}
+library(shiny)
+ui <- fluidPage(
   wellPanel(
   tags$a(href = "https://github.com/jeffreyCarlLong/platinum-dragon/blob/master/README.md", "R Shiny Tutorial Notebook"),
   tags$h3("HTML in R"),
@@ -267,8 +267,12 @@ fluidPage(
          " tags.")
   )
 )
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
 ```
 
+<img src="htmlR.png" width="350"/>
 
 Combine tabPanel() with tabsetPanel(), navlistPanel(), or navbarPage().
 
@@ -279,16 +283,17 @@ The first argument to column() is the width in 12 unit increments.
 Offsets from the right can also be used.
  
 ```{r htmlR2}
+library(shiny)
 fluidPage(
   tabsetPanel(
-    tabPanel("Tab 1",
+    tabPanel("Shiny App Tab 1",
     tags$img(height = 100, width = 100, src = "https://upload.wikimedia.org/wikipedia/commons/f/f5/Hoffmann-La_Roche_logo.svg"),
     fluidRow(                                  # <div class="row"> In the row</div>
       column(3), 
       column(2),                               # or column(2, plotOutput("hist")),
       column(5)                                # or column(5, sliderInput(...))
     ),
-    HTML("<h1>My Roche Shiny App</h1>")
+    HTML("<h4>My Roche Shiny App</h4>")
     ),
     fluidRow(
       column(4, offset=8)
@@ -304,11 +309,14 @@ em(),  h1(), h2(), ..., h(6),
 hr(), img(), p(), strong()
 
 ```{r eval= FALSE}
-fluidPage(
+library(shiny)
+ui <- fluidPage(
   navbarPage(
     navbarMenu()
   )
 )
+server <- function(input, output) {}
+shinyApp(ui = ui, server = server)
 ```
 
 [http://rstudio.github.io/shinydashboard/](http://rstudio.github.io/shinydashboard/)
@@ -319,10 +327,10 @@ fluidPage(
 
 [https://bootswatch.com/cerulean/](https://bootswatch.com/cerulean/)
 
+The following are some CSS pseudo-code.
 
-```{html css}
+```{r eval=FALSE}
 <head>
-  <link type="text/css" rel="stylesheet" href="bootswatch-cerulean.css"/>
   <style>
     li {
       color:purple;
@@ -331,53 +339,64 @@ fluidPage(
     .blue-item {
       color:blue;
     }
-    
+
     #dark {
       color:navy;
     }
   </style>
 </head>
-  
-<div class="container-fluid">
+ 
+<div>
   <h1>CSS examples</h1>
   <p>This webpage uses...
   </p>
   <ol>
-    <li>Purple line item, </li>
-    <li class="blue-item">Blue item, class style over-rides global li style; </li>
-    <li id="dark" class="blue-item">Navy item, id over-rides class style; </li>
-    <li id="dark" class="blue-item" style="color:green"> Green item, specify</li>
+    <li> Purple line item</li>
+    <li class="blue-item"> Blue item, class style over-rides global li style. </li>
+    <li id="dark" class="blue-item"> Navy item, id over-rides class style. </li>
+    <li id="dark" class="blue-item" style="color:green"> Green item, specify style to rule them all. </li>
   </ol>
 </div>
-
 ```
 
 Place .css files in the www folder of your app dir.
 To get the CSS to be used by Shiny, try one of the following.
 
+
 ```{r eval=FALSE}
+library(shiny)
 ui <- fluidPage(
   theme = "bootswatch-cerulean.css",
   sidebarLayout(
-    sidebarPanel(),
-    mainPanel()
+    sidebarPanel("This is the ", strong("sidebarPanel"), " for theme bootswatch-cerulean"),
+    mainPanel("This is the ", strong("mainPanel"), " for theme bootswatch-cerulean")
   )
 )
+server <- function(input, output) {}
+shinyApp(ui = ui, server = server)
+```
 
-# OR
+<img src="bootswatchPanels.png" width="650"/>
 
+```{r eval=FALSE}
+library(shiny)
 ui <- fluidPage(
   tag$head(
     tags$link(
       rel = "stylesheet",
       type = "text/css",
-      href = "file.css"
+      href = "bootswatchLitera.css"
     )
   )
 )
+server <- function(input, output) {}
+shinyApp(ui = ui, server = server)
+```
 
-# OR
+Add global style to header for paragraph tags (p).
 
+```{r eval=FALSE}
+library(shiny)
 ui <- fluidPage(
   tags$head(
     tags$style(HTML("
@@ -385,22 +404,30 @@ ui <- fluidPage(
         color:red;
       }
     "))
-  )
+  ),
+  tags$p("This is some red style in Shiny.")
 )
+server <- function(input, output) {}
+shinyApp(ui = ui, server = server)
+```
 
-# OR
+<img src="htmlShinyRedStyle.png" width="300"/>
 
+
+```{r eval=FALSE}
+library(shiny)
 ui <- fluidPage(
   includeCSS("file.css")    # Can be in app dir, not necessarily www
 )
 
 # where file.css is
+HTML(             # HTML() is not in the file.css 
 <style>
    p {
      color:red;
    }
- </style>
-
+</style>
+)
 # OR
 
 ui <- fluidPage(
