@@ -1,6 +1,7 @@
 
 # R Shiny Tutorial Notebook
 
+
 [RStudio Tutorial](https://shiny.rstudio.com/tutorial/)
 
 [Tutorial slides](https://ucsb-bren.github.io/env-info/wk08_shiny/shiny_lec.pdf)
@@ -241,7 +242,7 @@ shinyApp(ui = ui, server = server)
 
 An image of the Shiny app.
 
-<img src="shinyApp.png" width=700>
+<img src="shinyApp.png" width=800>
 
 ### HTML in R
 
@@ -252,7 +253,7 @@ library(shiny)
 names(tags)
 ```
 
-<img src="shinyTags.png" width=400>
+<img src="shinyTags.png" width=600>
 
 Make a "www" directory, deposit images, no need to reference dir in call.
 
