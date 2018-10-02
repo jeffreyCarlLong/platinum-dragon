@@ -304,6 +304,8 @@ fluidPage(
 
 ```
 
+<img src="rocheApp.png" width=300>
+
 Wrapper functions exist for: a(), br(), code(), 
 em(),  h1(), h2(), ..., h(6), 
 hr(), img(), p(), strong()
