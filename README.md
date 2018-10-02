@@ -239,16 +239,20 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 ```
 
+An image of the Shiny app.
 
+<img src="shinyApp.png" width=700>
 
 ### HTML in R
 
 Use tags() to add static content to your Shiny app.
 
-```{r}
+```{r eval=FALSE}
 library(shiny)
 names(tags)
 ```
+
+<img src="shinyTags.png" width=400>
 
 Make a "www" directory, deposit images, no need to reference dir in call.
 
@@ -272,6 +276,8 @@ server <- function(input, output) {}
 shinyApp(ui = ui, server = server)
 ```
 
+Output from above code looks like this:
+
 <img src="htmlR.png" width="350"/>
 
 Combine tabPanel() with tabsetPanel(), navlistPanel(), or navbarPage().
@@ -282,7 +288,7 @@ The first argument to column() is the width in 12 unit increments.
 
 Offsets from the right can also be used.
  
-```{r htmlR2}
+```{r htmlR2, eval=FALSE}
 library(shiny)
 fluidPage(
   tabsetPanel(
@@ -304,11 +310,13 @@ fluidPage(
 
 ```
 
+Output from above code looks like this:
+
 <img src="rocheApp.png" width=300>
 
-Wrapper functions exist for: a(), br(), code(), 
+R wrapper functions exist for: a(), br(), code(), 
 em(),  h1(), h2(), ..., h(6), 
-hr(), img(), p(), strong()
+hr(), img(), p(), and strong().
 
 ```{r eval= FALSE}
 library(shiny)
@@ -364,6 +372,8 @@ shinyApp(ui = ui, server = server)
 </div>
 ```
 
+Output from above code looks like this:
+
 <img src="cssExample.png" width=300>
 
 Place .css files in the www folder of your app dir.
@@ -382,6 +392,8 @@ ui <- fluidPage(
 server <- function(input, output) {}
 shinyApp(ui = ui, server = server)
 ```
+
+Output from above code looks like this:
 
 <img src="bootswatchPanels.png" width="650"/>
 
@@ -417,6 +429,8 @@ ui <- fluidPage(
 server <- function(input, output) {}
 shinyApp(ui = ui, server = server)
 ```
+
+Output from above code looks like this:
 
 <img src="htmlShinyRedStyle.png" width="300"/>
 
