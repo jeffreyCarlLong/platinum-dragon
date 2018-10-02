@@ -189,16 +189,18 @@ a render*() function will rerun the entire block of code associated with it.
 
 ```{r shinyTemplate7, eval = FALSE}
 library(shiny)
-
 ui <- fluidPage(
-  titlePanel("Jeff Long's Reactive Shiny App"),
+    #titlePanel(title=div(img(src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Hoffmann-La_Roche_logo.svg", align="right"), "Jeff Long's Reactive Shiny App")),
+    #titlePanel(title=div(img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Roche_Logo.svg/64px-Roche_Logo.svg.png", align="right"), "Jeff Long's Reactive Shiny App")),
+    titlePanel(title=div(img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Roche_Logo.svg/128px-Roche_Logo.svg.png", align="right"), "Jeff Long's Reactive Shiny App")),
+    #titlePanel(title=div(img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Roche_Logo.svg/256px-Roche_Logo.svg.png", align="right"), "Jeff Long's Reactive Shiny App")),
   sidebarLayout(                                   # Add side panel for inputs
     sidebarPanel(
                                                    # *Input() functions
       sliderInput(inputId = "numNum",              # Input value of Slider
                   label = "Choose a number",
                   value = 25, min = 1, max = 100),
-      br(),
+     br(),
       textInput(inputId = "note",
                 label = "Note",
                 value = "Histogram with statistics"),
