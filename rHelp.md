@@ -5,6 +5,7 @@
 These are some useful R functions for wrangling data. 
 The functions include: 
 aggregate, 
+apply, 
 bash engine, 
 c (concatenate), 
 colnames, 
@@ -34,6 +35,20 @@ write.csv, ...
 
 ### aggregate: Sum samples within a group
 df <- aggregate(df$varToFunctionalize, by df["varToGroup"], FUN = mean)
+
+### apply: anonymous, user defined or other functions
+apply(df[1:3], 2, function(x) (min(x) + max(x)) / 2)             # 2 is for col, 1 is by row
+
+midrange <- function(x) (min(x) + max(x)) / 2
+
+  apply(df[1:3], 2, midrange)
+
+apply(df[1:3], 2, summary)                                       # this forms a matrix
+
+sapply(df, function(x) round(coef(lm(df[1] ~ x, data = df)), 3)  # table of coefficients for linear regressions on variables in col2,3 against df col1
+
+### by: higher order function (function on function)
+by(df[1:3], df$CategoricalVariable, summary)
 
 ### bash in RStudio
 bash engine='bash'
@@ -115,6 +130,9 @@ anotherDf <- df %>%
   group_by(groupVar) %>%
   
   summarise(df = mean(result))
+  
+### table: create a table for the counts of a factor
+table(df[1])
 
 ### t.test: for Gene Mutation of Interest given IC50 scores for cell lines
 d.filt <- filter(d, d$Gene == "GoI")
