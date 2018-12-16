@@ -49,8 +49,11 @@ dfRmNa <- drop_na(df, "Var")
 
 ### filter Variable on Value
 df <- filter(df, df$\`Variable Name\` == "Value")
+
 df <- filter(df, !grepl('ID1|ID2|ID3', idVar))
+
 d.filt <- filter(d, d$Gene == "GoI")
+
   t.test(d.filt$IC50~d.filt$Mutated)
 
 ### Consolidate Variable Values
@@ -61,7 +64,9 @@ df <- filter(df, !grepl('ID1|ID2|ID3',idVar))
 
 ### group_by: Summarise with group_by
 df <- df %>% 
+
   group_by(groupVar) %>% 
+
   summarise_each(funs(min(resultVar, na.rm = TRUE))) 
 
 ### gsub: Remove commas, AKA Replace commas with nothing
@@ -84,6 +89,7 @@ df <- read_excel("/Path/to/file.xlsx")
 
 ### select: Parse out columns of interest
 dfSvelte <- select(dfSvelte, 1:42,45)
+
 df <- df[,c("Col 1", "Col 2", "Col 3")]
 
 ### separate: Splitting a variable column
@@ -97,6 +103,7 @@ sort -k1,1 /Users/jlong/file.txt > /Users/jlong/file.sorted.txt
 
 ### spread: Transposing data
 dfWide <- dfLong %>% 
+
   spread(\`Row Name Var\`, \`Result To Spread\`, convert = TRUE)
 
 ### substr: Cut up regular values (by fixed width of string)
@@ -104,11 +111,14 @@ df$\`The Var\` <- substr(as.character(df$\`The Var\`), index1, index2)
 
 ### summarise: aggregates
 anotherDf <- df %>%
+
   group_by(groupVar) %>%
+  
   summarise(df = mean(result))
 
 ### t.test: for Gene Mutation of Interest given IC50 scores for cell lines
 d.filt <- filter(d, d$Gene == "GoI")
+
   t.test(d.filt$IC50~d.filt$Mutated)
 
 ### unique: Remove duplicates
