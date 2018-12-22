@@ -22,6 +22,7 @@ left_join,
 paste, 
 rbind, 
 read_excel, 
+save, 
 select, 
 separate, 
 separate_rows,
@@ -101,6 +102,9 @@ dfBound <- rbind(df1, df2)
 
 ### read_excel: Read in Excel file
 df <- read_excel("/Path/to/file.xlsx")
+
+### save
+save(df, file = "df.RData")
 
 ### select: Parse out columns of interest
 dfSvelte <- select(dfSvelte, 1:42,45)
