@@ -146,6 +146,9 @@ d.filt <- filter(d, d$Gene == "GoI")
 ### unique: Remove duplicates
 df <- unique(df)
 
+### str_to_upper: convert to uppercase
+stringr::str_to_upper("anonymous function")
+
 ### write.csv: Write data
 write.csv(df, "Filename.csv", row.names=FALSE, na="")
 
