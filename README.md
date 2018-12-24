@@ -47,7 +47,7 @@ shinyApp(ui = ui, server = server)
 
 Add elements to your app as arguments to fluidPage().
 
-<img src="inputFunctions.png" width="650"/>
+<img src="images/inputFunctions.png" width="650"/>
 
 ```{r shinyTemplate3, eval = FALSE}
 library(shiny)
@@ -70,7 +70,7 @@ shinyApp(ui = ui, server = server)
 
 To display reactive results, add to fluidPage() with an *Output() function. 
 
-<img src="outputFunctions.png" width="400"/>
+<img src="images/outputFunctions.png" width="400"/>
 
 ```{r shinyTemplate4, eval = FALSE}
 library(shiny)
@@ -104,7 +104,7 @@ Rules to writing server functions:
 * Build objects to display with render*()
 * Access input values with input$
 
-<img src="renderFunctions.png" width="400"/>
+<img src="images/renderFunctions.png" width="400"/>
 
 ```{r shinyTemplate5, eval = FALSE}
 library(shiny)
@@ -244,7 +244,7 @@ shinyApp(ui = ui, server = server)
 
 An image of the Shiny app.
 
-<img src="shinyApp.png" width=800>
+<img src="images/shinyApp.png" width=800>
 
 ### HTML in R
 
@@ -255,7 +255,7 @@ library(shiny)
 names(tags)
 ```
 
-<img src="shinyTags.png" width=600>
+<img src="images/shinyTags.png" width=600>
 
 Make a "www" directory, deposit images, no need to reference dir in call.
 
@@ -281,7 +281,7 @@ shinyApp(ui = ui, server = server)
 
 Output from above code looks like this:
 
-<img src="htmlR.png" width="350"/>
+<img src="images/htmlR.png" width="350"/>
 
 Combine tabPanel() with tabsetPanel(), navlistPanel(), or navbarPage().
 
@@ -315,7 +315,7 @@ fluidPage(
 
 Output from above code looks like this:
 
-<img src="rocheApp.png" width=300>
+<img src="images/rocheApp.png" width=300>
 
 R wrapper functions exist for: a(), br(), code(), 
 em(),  h1(), h2(), ..., h(6), 
@@ -377,7 +377,7 @@ shinyApp(ui = ui, server = server)
 
 Output from above code looks like this:
 
-<img src="cssExample.png" width=300>
+<img src="images/cssExample.png" width=300>
 
 Place .css files in the www folder of your app dir.
 To get the CSS to be used by Shiny, try one of the following.
@@ -398,7 +398,7 @@ shinyApp(ui = ui, server = server)
 
 Output from above code looks like this:
 
-<img src="bootswatchPanels.png" width="650"/>
+<img src="images/bootswatchPanels.png" width="650"/>
 
 ```{r eval=FALSE}
 library(shiny)
@@ -435,7 +435,7 @@ shinyApp(ui = ui, server = server)
 
 Output from above code looks like this:
 
-<img src="htmlShinyRedStyle.png" width="300"/>
+<img src="images/htmlShinyRedStyle.png" width="300"/>
 
 
 ```{r eval=FALSE}
