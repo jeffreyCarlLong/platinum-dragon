@@ -470,4 +470,3 @@ jQuery addition in the header,
 [http://shiny.rstudio.com/articles/google-analytics.html](http://shiny.rstudio.com/articles/google-analytics.html).
 
 
-Stack Overflow Shiny Apps
