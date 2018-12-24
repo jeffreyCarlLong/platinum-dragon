@@ -4,6 +4,7 @@ The following is a list of blogs and resources which I discovered on my machine 
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**parsnip** | Standardizes the interface for fitting models as well as their return values — separating model specification from model implementation | [Tidymodels](https://tidymodels.github.io/parsnip/)
 **Meetup slides: Introducing Deep Learning with Keras** | General Keras slides | [Shirin's playgRound](https://shirinsplayground.netlify.com/2018/04/ruhrpy_meetup_2018_slides/)
 **How to call bullshit on AI companies (aka a short lesson on recall)** | precision, recall, accuracy | [Cartesian Faith](https://cartesianfaith.com/2018/04/10/how-to-call-bullshit-on-ai-companies-aka-a-short-lesson-on-recall/)
 **ML models: What they can’t learn?** | True model plots | [R Bloggers](https://www.r-bloggers.com/ml-models-what-they-cant-learn/)
@@ -29,6 +30,10 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**fs** | a cross-platform, uniform interface to file system operations | [fs](https://fs.r-lib.org/)
+**pkgdown 1.0.0** | build a website for your package | [Tidyverse](https://www.tidyverse.org/articles/2018/05/pkgdown-1-0-0/)
+**devtools 2.0.0** | Conscious uncoupling | [Tidyverse](https://www.tidyverse.org/articles/2018/10/devtools-2-0-0/)
+**ggplot2 3.0.0** | GT 2000 reverse dependencies | [Tidyverse](https://www.tidyverse.org/articles/2018/07/ggplot2-3-0-0/)
 **Why you should master the small multiple chart** | facet_wrap(~cylinders), facet_grid(Student ~ Married), or facet_wrap(~key, scales = 'free')| [Sharp Sight](https://www.sharpsightlabs.com/blog/master-small-multiple/)
 **Writing better R functions** | ggtitle(bquote("Crosstabs"\~.(dfname)\*.(aaa)\~"by"\*.(bbb))); deparse, substitute function, check 4 loaded library | [Chuck Powell](https://ibecav.github.io/betterfunctions/)
 **Writing better R functions part two** | plot types dodge (side), stack, fill (percentage) | [Chuck Powell](https://ibecav.github.io/betterfunctions2/)
