@@ -1,0 +1,1137 @@
+---
+title: "Writing R Functions, 2018 Data Camp Course with Hadley Wickham"
+author: "Jeffrey Long"
+date: "10/11/2018"
+output: html_document
+---
+
+`` `I dwell in Possibility —` ``
+
+Emily Dickinson #466
+
+
+## Writing R Functions
+
+This R Markdown file follows the Data Camp course on R Functions team taught by Hadley Wickham, [https://campus.datacamp.com/courses/writing-functions-in-r/](https://campus.datacamp.com/courses/writing-functions-in-r/).
+
+These are my notes.
+
+
+```{r basicFunctionTemplate}
+# setwd("/Users/jeffreylong/R/rFunctions/")
+# setwd("/Users/jeffreylong/software/R/rFunctions")
+
+# my_fun <- function(arg1, arg2) {
+# 	body
+# }
+
+add <- function(x, y=1) {
+	x + y
+}
+
+formals(add)
+
+body(add)
+
+environment(add)
+```
+
+The last expression evaluated in 
+a function is the return value
+
+```{r}
+f <- function(x) {
+	if (x < 0) {
+	  -x
+	} else {
+	  x
+	}
+}
+
+f(-5)
+f(15)
+```
+
+Use return() to exit function and 
+return value for special cases.
+
+One can reassign a function name.
+```{r}
+mean2 <- mean
+mean2(1:10)
+```
+
+### ANONYMOUS FUNCTIONS
+Functions which don't need to be assigned 
+```{r}
+function(x) { x + 1 }
+
+(function(x) { x + 1 })(2)
+```
+Anonymous functions must be all on one line.
+
+Similar to creating a vector of random
+ numbers and not saving it.
+
+```{r}
+# Define ratio() function
+ratio <- function(x, y) {
+  x / y
+}
+# Call ratio() with arguments 3 and 4
+ratio(3,4)
+
+ratio(x = 3, y = 4)
+```
+
+```{r}
+?mean
+
+# Usage: mean(x, trim = 0, na.rm = FALSE, …)
+# Rewrite the call to follow best practices
+mean(0.1,x=c(1:9, NA),TRUE)
+
+mean(c(1:9, NA), trim = 0.1, na.rm = TRUE)
+```
+
+## Two types of vectors in R
+
+Atomic vectors of six types: logical, integer, double, character, complex, and raw
+
+Lists, a.k.a. recursive vectors, because lists can contain other lists
+
+Atomic vectors are homogenous, lists can be heterogeneous
+
+Its type, find with typeof()
+
+```{r}
+typeof(letters)
+typeof(1:10)
+```
+
+Its length, find with:
+
+$length()$
+
+Check if value is NA:
+
+$is.na()$
+
+## Subsetting with [, [[ or $
+
+[ extract  a sublist
+
+[[ and $ extract elements, remove a level of hierarchy
+
+```{r}
+
+a <- list(
+  element1 = 7:9,
+  element2 = "Sylvan Woods",
+  element3 = pi
+)
+
+str(a[1])
+
+str(a[[1]])
+
+a[[1]]
+
+a[[1]][1]
+
+a[[1]][[1]]
+
+```
+
+
+### Subsetting Practice with Tricky List
+```{r}
+df1 <- data.frame(
+  a = 1:11,
+  b = rnorm(11),
+  c = rnorm(11),
+  d = rnorm(11)
+)
+
+fit <- lm(a ~ b + c + d, data = df1)
+tricky_list <- summary(fit)
+tricky_list
+## coefficients(fit) # model coefficients
+## confint(fit, level=0.95) # CIs for model parameters 
+## fitted(fit) # predicted values
+## residuals(fit) # residuals
+## anova(fit) # anova table 
+## vcov(fit) # covariance matrix for model parameters 
+## influence(fit) # regression diagnostics
+## # diagnostic plots 
+## layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page 
+## plot(fit)
+## # compare models
+## fit1 <- lm(a ~ b + c + d, data = df1)
+## fit2 <- lm(a ~ b + c, data = df1)
+## anova(fit1, fit2)
+## #install.packages("DAAG")
+## library("DAAG")
+## cv.lm(data = df1, fit, m=3) # 3 fold cross-validation
+```
+
+```{r}
+# 2nd element in tricky_list 
+typeof(tricky_list[[2]])
+
+# Element called x in tricky_list
+typeof(tricky_list[[3]])
+
+# 2nd element inside the element called x in tricky_list
+typeof(tricky_list[['x']][[2]])
+
+names(tricky_list)
+str(tricky_list)
+```
+
+```{r}
+# Guess where the regression model is stored
+names(tricky_list[['call']])
+
+str(tricky_list[['call']])
+# Subset the coefficients element
+tricky_list[['coefficients']]
+ 
+# Subset the wt element
+tricky_list[['coefficients']][[2,3]]
+
+```
+
+
+##  for Loops in R
+
+```{r}
+primes_list <- list(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43)
+for ( i in 1:length(primes_list)) { # sequence
+	print(primes_list[[i]])              # body
+}
+```
+
+```{r}
+for (i in 1:ncol(df1)) {
+	print(median(df1[[i]]))
+}
+```
+
+### seq_along()
+
+```{r}
+# Replace the 1:ncol(df) sequence
+for (i in seq_along(df1)) {
+  print(median(df1[[i]]))
+}
+
+# Create an empty data frame
+empty_df <- data.frame()
+
+# Repeat for loop to verify there is no error
+for (i in seq_along(empty_df)) {
+  print(median(empty_df[[i]]))
+}
+```
+
+### vector()
+
+Has two arguments: the type of the vector ("logical", "integer", "double", "character", etc.) and the length of the vector.
+
+```{r}
+# Create new double vector: output
+output <- vector("double", ncol(df1))
+output
+
+# Alter the loop
+for (i in seq_along(df1)) {
+  
+# Change code to store result in output
+output[[i]] = median(df1[[i]])
+}
+# Print output
+output
+```
+
+```{r eval = FALSE}
+# FUNCTIONS
+df <-  df1
+df$a <- (df$a - min(df$a, na.rm = TRUE)) /
+  (max(df$a, na.rm = TRUE) - min(df$a, na.rm = TRUE))
+df$b <- (df$b - min(df$b, na.rm = TRUE)) /
+  (max(df$b, na.rm = TRUE) - min(df$b, na.rm = TRUE))
+df$c <- (df$c - min(df$c, na.rm = TRUE)) /
+  (max(df$c, na.rm = TRUE) - min(df$c, na.rm = TRUE))
+df$d <- (df$d - min(df$d, na.rm = TRUE)) /
+  (max(df$d, na.rm = TRUE) - min(df$d, na.rm = TRUE))
+
+#########################################
+
+# Better FUNCTIONS
+df$a <- rescale01(df$a)
+df$b <- rescale01(df$b)
+df$c <- rescale01(df$c)
+df$d <- rescale01(df$d)
+
+#########################################
+
+# BEST PURRR
+install.packages("purrr")
+library("purrr")
+df[] <- map(df, rescale01)
+```
+
+```{r}
+# Define example vector x
+x <- 1:10
+x
+
+# Rewrite this snippet to refer to x
+(x - min(x, na.rm = TRUE)) /
+    (max(x, na.rm = TRUE) - min(x, na.rm = TRUE))
+
+# Define rng
+rng = range(x, na.rm = TRUE)
+# Rewrite this snippet to refer to the elements of rng
+(x - min(x, na.rm = TRUE)) / (rng[[2]] - rng[[1]])
+
+# Use the function template to create the rescale01 function
+rescale01 <- function(x) {
+  rng = range(x, na.rm = TRUE)
+  (x - min(x, na.rm = TRUE)) / (rng[[2]] - rng[[1]])
+  }
+
+# Test your function, call rescale01 using the vector x as the argument
+rescale01(x)
+```
+
+```{r}
+# Define example vectors x and y
+x <- c( 1, 2, NA, 3, NA)
+y <- c(NA, 3, NA, 3,  4)
+
+# Count how many elements are missing in both x and y
+sum(is.na(x) & is.na(y))
+
+# Turn this snippet into a function: both_na()
+both_na <- function(x, y) {
+  sum(is.na(x) & is.na(y))
+}
+
+# Define x, y1 and y2
+x <-  c(NA, NA, NA)
+y1 <- c( 1, NA, NA)
+y2 <- c( 1, NA, NA, NA)
+
+# Removing last element of y2 
+y3 <- y2[-length(y2)]
+y3
+
+
+# Call both_na on x, y1
+both_na(x,y1)
+
+# Call both_na on x, y2
+both_na(x,y2)
+?qnorm
+```
+
+
+
+```{r}
+# Rewrite mean_ci to take arguments named level and x
+mean_ci <- function(x, level = 0.95) {
+  se <- sd(x) / sqrt(length(x))
+  alpha <- 1 - level
+  mean(x) + se * qnorm(c(alpha / 2, level / 2))
+}
+x <- c(1,2,3,4,5,6,7,8,9,10)
+mean_ci(x)
+mean_ci(x, .9)
+mean_ci(x, .85)
+mean_ci(x, .8)
+```
+
+```{r}
+# Alter the mean_ci function
+mean_ci <- function(x, level = 0.95) {
+  if (length(x) == 0) {
+    warning("`x` was empty", call. = FALSE)
+    interval <- c(-Inf, Inf)
+    return(interval)
+  } else {
+    se <- sd(x) / sqrt(length(x))
+    alpha <- 1 - level
+    interval <- mean(x) + se * qnorm(c(alpha / 2, 1 - alpha / 2))
+    return(interval)
+  }
+}
+```
+
+### New function definition
+
+```{r}
+f <- function(x, y) {
+  x[is.na(x)] <- y
+  cat(sum(is.na(x)), y, "\n")
+  x
+}
+
+# Define a numeric vector x with the values 1, 2, NA, 4 and 5
+
+x <- c(1,2,NA,4,5)
+
+# Call f() with the arguments x = x and y = 3
+
+f(x, y = 3)
+
+# Call f() with the arguments x = x and y = 10
+
+f(x, y = 10)
+
+# New replace_missings funciton definition
+
+replace_missings <- function(x, replacement) {
+  # Define is_miss
+  is_miss <- is.na(x)
+  
+  # Rewrite rest of function to refer to is_miss
+  x[is_miss] <- replacement
+  cat(sum(is_miss), replacement, "\n")
+  x
+}
+
+x <- c(1,2,NA,4,5)
+replace_missings(x, 88)
+
+
+df <- data.frame(
+  x = rnorm(10),
+  y = rnorm(10),
+  z = rnorm(10)
+)
+df$z <- c(-0.6264538, NA, -0.8356286, 1.5952808, 0.3295078, -0.8204684, 0.4874291, 0.7383247, 0.5757814, NA)
+
+replace_missings <- function(x, replacement) {
+  is_miss <- is.na(x)
+  x[is_miss] <- replacement
+  
+# Rewrite to use message()
+  message(sum(is_miss), " missing values replaced by the value ", replacement)
+  x
+}
+
+# Check your new function by running on df$z
+replace_missings(df$z, replacement = 0)
+```
+
+
+## Chapter 3 Data Camp R Functions Class by Hadley Wickam
+
+```{r}
+##########################################
+# make the dataframe
+df <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+median(df[[1]])
+median(df[[2]])
+median(df[[3]])
+median(df[[4]])
+
+##########################################
+
+# Initialize output vector
+output <- numeric(ncol(df))
+# Fill in the body of the for loop
+for (i in seq_along(df)) {            
+  output[i] <- median(df[[i]])
+}
+
+# View the result
+output
+
+##########################################
+
+# Turn this code into col_median()
+col_median <- function(df) {
+  output <- numeric(ncol(df))
+  for (i in seq_along(df)) {            
+    output[[i]] <- median(df[[i]])      
+  }
+  output
+}
+
+col_median(df)
+
+##########################################
+
+col_mean <- function(df) {
+  output <- numeric(ncol(df))
+  for (i in seq_along(df)) {
+    output[[i]] <- mean(df[[i]])
+  }
+  output
+}
+
+##########################################
+
+col_sd <- function(df) {
+  output <- numeric(ncol(df))
+  for (i in seq_along(df)) {
+    output[[i]] <- sd(df[[i]])
+  }
+  output
+}
+
+##########################################
+
+# Add a second argument called power
+f <- function(x, power) {
+    # Edit the body to return absolute deviations raised to power
+    abs(x - mean(x))^power
+}
+#x <- c(4,5,6,7,8)
+#f(x,2)
+
+##########################################
+
+col_summary <- function(df, fun) {
+  output <- numeric(ncol(df))
+  for (i in seq_along(df)) {
+    output[[i]] <- fun(df[[i]])
+  }
+  output
+}
+
+##########################################
+
+# Find the column medians using col_median() and col_summary()
+col_median(df)
+col_summary(df, median)
+
+# Find the column means using col_mean() and col_summary()
+col_mean(df)
+col_summary(df, mean)
+
+# Find the column IQRs using col_summary()
+col_summary(df, IQR)
+
+##########################################
+```
+
+## apply Family
+
+Aside to Datacamp Intermediate R Class on lapply and sapply
+
+<https://campus.datacamp.com/courses/intermediate-r/chapter-4-the-apply-family>
+
+### lapply
+
+```{r}
+nyc <- list(pop = 8405837,
+            boroughs = c("Manhattan", "Bronx", "Brooklyn", "Queens", "Staten Island"),
+            capital = FALSE)
+
+for (info in nyc) {
+  print(class(info))
+}
+##################
+lapply(nyc, class)
+
+##########################################
+
+cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro")
+num_chars <- c()
+for(i in 1:length(cities)) {
+  num_chars[i] <- nchar(cities[i])
+}
+num_chars
+##################
+lapply(cities, nchar)
+##################
+#Turn list into a vector
+unlist(lapply(cities, nchar))
+
+##########################################
+
+oil_prices <- list(2.37, 2.49, 2.22, 2.47, 2.32)
+triple <- function(x) {
+  3 * x
+}
+result <- lapply(oil_prices, triple)
+str(result)
+unlist(result)
+##################
+multiply <- function(x, factor) {
+  x * factor
+}
+times3 <- lapply(oil_prices, multiply, factor = 3)
+unlist(times3)
+times4 <- lapply(oil_prices, multiply, factor = 4)
+unlist(times4)
+
+##########################################
+##########################################
+##########################################
+
+
+# The vector pioneers 
+pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+
+# Split names from birth year
+split_math <- strsplit(pioneers, split = ":")
+
+# Convert to lowercase strings: split_low
+split_low <- lapply(split_math, tolower)
+
+# Take a look at the structure of split_low
+str(split_low)
+
+select_first <- function(x) {
+  x[1]
+}
+
+# Apply select_first() over split_low: names
+names <- lapply(split_low, select_first)
+
+# Write function select_second()
+select_second <- function(x) {
+  x[2]
+}
+
+# Apply select_second() over split_low: years
+years <- lapply(split_low, select_second)
+
+##################
+# Anonymous functions in lapply
+
+# split_low has been created for you
+split_low
+
+# Transform: use anonymous function inside lapply
+lapply(split_low, function(x) {x[1]})
+
+# Transform: use anonymous function inside lapply
+lapply(split_low, function(x) {x[2]})
+
+##################
+# Generic select function
+select_el <- function(x, index) {
+  x[index]
+}
+
+# Use lapply() twice on split_low: names and years
+names <- lapply(split_low, select_el, index = 1)
+years <- lapply(split_low, select_el, index = 2)
+
+unlist(names)
+unlist(years)
+
+##################
+# Apply function that return NULL
+lapply(list(1, "a", TRUE), str)
+
+str(TRUE)
+```
+
+
+### sapply
+
+Simplify Apply.
+
+Output is a named vector.
+
+sapply calls lapply to apply function over each item of the vector. Then uses simplify to array function to convert the list that lapply created to an array.
+
+<https://campus.datacamp.com/courses/intermediate-r/chapter-4-the-apply-family?ex=7>
+
+```{r}
+##########################################
+##########################################
+##########################################
+# sapply
+unlist(lapply(cities, nchar))
+sapply(cities, nchar) 
+sapply(cities, nchar, USE.NAMES = FALSE) 
+
+# Returns the min and max letter of string in the alphabetical order
+first_and_last <- function(name) {
+  name <- gsub(" ", "", name)
+  letters <- strsplit(name, split = "")[[1]]
+  c(first = min(letters), last = max(letters))
+}
+first_and_last("New York")
+
+##################
+
+# Yields a matrix of first and last letters
+sapply(cities, first_and_last)
+
+# Unable to simplify?
+unique_letters <- function(name) {
+  name <- gsub(" ", "", name)
+  letters <- strsplit(name, split = "")[[1]]
+  unique(letters)
+}
+unique_letters("London")
+lapply(cities, unique_letters)
+sapply(cities, unique_letters)
+
+```
+
+sapply tries to simplify list to array. 
+
+```{r}
+##########################################
+temp <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+# Use lapply() to find each day's minimum temperature
+lapply(temp, min)
+
+# Use sapply() to find each day's minimum temperature
+sapply(temp, min)
+
+# Use lapply() to find each day's maximum temperature
+lapply(temp, max)
+
+# Use sapply() to find each day's maximum temperature
+sapply(temp, max)
+
+##################
+save(temp, file = "temp.RData")
+##################
+
+# Finish function definition of extremes_avg
+extremes_avg <- function(x) {
+  ( min(x) + max(x) ) / 2
+}
+
+# Apply extremes_avg() over temp using sapply()
+sapply(temp, extremes_avg)
+
+# Apply extremes_avg() over temp using lapply()
+lapply(temp, extremes_avg)
+
+##################
+
+# Create a function that returns min and max of a vector: extremes
+extremes <- function(x) {
+  c(min = min(x), max = max(x))
+}
+
+# Apply extremes() over temp with sapply()
+sapply(temp, extremes)
+
+# Apply extremes() over temp with lapply()
+lapply(temp, extremes)
+
+##################
+
+# Definition of below_zero()
+below_zero <- function(x) {
+  return(x[x < 0])
+}
+
+# Apply below_zero over temp using sapply(): freezing_s
+freezing_s <- sapply(temp, below_zero)
+
+# Apply below_zero over temp using lapply(): freezing_l
+freezing_l <- lapply(temp, below_zero)
+
+
+# Are freezing_s and freezing_l identical?
+identical(freezing_s, freezing_l)
+
+##################
+
+# Definition of print_info()
+print_info <- function(x) {
+  cat("The average temperature is", mean(x), "\n")
+}
+
+# Apply print_info() over temp using sapply()
+sapply(temp, print_info)
+
+# Apply print_info() over temp using lapply()
+lapply(temp, print_info)
+```
+
+### vapply
+
+apply function over list or vector
+
+$vapply(x, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)$
+
+explicitly specify output format
+
+```{r}
+##########################################
+##########################################
+##########################################
+cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro")
+sapply(cities, nchar)
+# vapply(x, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
+vapply(cities, nchar, numeric(1))
+first_and_last <- function(name) {
+  name <- gsub(" ", "", name)
+  letters <- strsplit(name, split = "")[[1]]
+  c(first = min(letters), last = max(letters))
+}
+vapply(cities, first_and_last, character(2))
+# These throw errors, so don't uncomment
+## vapply(cities, first_and_last, character(1))
+## vapply(cities, first_and_last, numeric(2))
+
+##################
+temp <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+# Definition of basics()
+basics <- function(x) {
+  c(min = min(x), mean = mean(x), max = max(x))
+}
+
+# Apply basics() over temp using vapply()
+vapply(temp, basics, numeric(3))
+
+##################
+
+# Definition of the basics() function
+basics <- function(x) {
+  c(min = min(x), mean = mean(x), median = median(x), max = max(x))
+}
+vapply(temp, basics, numeric(4))
+
+##################
+
+# Convert to vapply() expression
+# sapply(temp, max)
+vapply(temp, max, numeric(1))
+
+# Convert to vapply() expression
+# sapply(temp, function(x, y) { mean(x) > y }, y = 5)
+vapply(temp, function(x, y) { mean(x) > y }, y = 5, logical(1))
+```
+
+## purrr Intro
+
+```{r}
+df <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+# Load the purrr package
+library(purrr)
+
+# Use map_dbl() to find column means
+map_dbl(df, mean)
+
+# Use map_dbl() to column medians
+map_dbl(df, median)
+
+# Use map_dbl() to find column standard deviations
+map_dbl(df, sd)
+
+#########################################
+
+planes <- data.frame(
+  year = c(1956, 1975, 1977, 1996, 2010, NA),
+  engines = c(4, 1, 2, 2, 2, 1),
+  seats = c(102, 4, 139, 142, 20, 2),
+  speed = c(232, 108, 432, NA, NA, NA)
+)
+planes
+
+# Find the mean of each column
+map_dbl(planes, mean)
+
+# Find the mean of each column, excluding missing values
+map_dbl(planes, mean, na.rm = TRUE)
+
+# Find the 5th percentile of each column, excluding missing values
+map_dbl(planes, quantile, probs = 0.05, na.rm = TRUE)
+
+#########################################
+df3 <- data.frame(
+  A = rnorm(10),
+  B = c("A","B","A","B","A","B","A","B","A","B"),
+  C = c(1,2,3,4,5,6,7,8,9,10),
+  D = rnorm(10)
+)
+# Find the columns that are numeric
+map_lgl(df3, is.numeric)
+
+# Find the type of each column
+map_chr(df3, typeof)
+
+# Find a summary of each column
+map(df3, summary)
+
+```
+```{r}
+# Just a quick aside to convert to uppercase
+library(stringr)
+stringr::str_to_upper("anonymous function")
+```
+
+### Specifying .f
+
+Some shortcuts for anonymous function reference and subsetting
+
+```{r}
+df <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+# mapping an existing fuction of one you defined
+map(df, summary)
+# mapping an ANONYMOUS FUNCTION
+map(df, function(x) sum(is.na(x)))
+# mapping an anonymous function defined using a formula SHORTCUT
+map(df, ~ sum(is.na(.)))
+
+```
+
+### Subsetting 
+
+Shortcut for SUBSETTING
+
+```{r}
+list_of_results <- list(
+  list(a = 1, b = "A"),
+  list(a = 2, b = "B"),
+  list(a = 3, b = "C")
+)
+
+# An Anonymous Function
+map_dbl(list_of_results, function(x) x[["a"]])
+
+# Shortcut for string subsetting
+map_dbl(list_of_results, "a")
+
+# Shortcut for integer subsetting
+map_dbl(list_of_results,1)
+```
+
+## Purrr
+
+Writing anonymous functions takes a lot of extra key strokes, so purrr provides a shortcut that allows you to write an anonymous function as a one-sided formula instead.
+
+In R, a one-sided formula starts with a ~, followed by an R expression. In purrr's map functions, the R expression can refer to an element of the .x argument using the . character.
+
+Let's take a look at an example. Imagine, instead of a regression on each data frame in cyl, we wanted to know the mean displacement for each data frame. One way to do this would be to use an anonymous function:
+
+$map\_dbl(cyl, function(df) mean(df\$disp))$
+
+To perform the same operation using the formula shortcut, we replace the function definition (function(df)) with the ~, then when we need to refer to the element of cyl the function operates on (in this case df), we use a ..
+
+$map\_dbl(cyl, ~ mean(.\$disp))$
+
+See how much less typing it involves! It also saves you from coming up with an argument name. Can you rewrite our previous anonymous function using this formula shortcut instead?
+
+```{r}
+# Split the data frame mtcars based on the unique values in the cyl column
+cyl <- split(mtcars, mtcars$cyl)
+
+# list of 3 dataframes, one for each 4, 6, and 8 cylinders
+# Examine the structure of cyl
+str(cyl)
+
+# Extract the first element into four_cyls
+four_cyls <- cyl[[1]]
+
+# Fit a linear regression model of mpg on wt using four_cyls
+lm(mpg ~ wt, data = four_cyls)
+
+# Turn the snippet of code into a function
+fit_reg <- function(df) {
+  lm(mpg ~ wt, data = df)
+}
+
+# Pass the function into map()
+map(cyl, fit_reg)
+
+# Rewrite to call an anonymous function
+map(cyl, function(df) lm(mpg ~ wt, data = df))
+
+# Rewrite to use the formula shortcut instead
+map(cyl, ~ lm(mpg ~ wt, data = .))
+```
+
+There are also some useful shortcuts that come in handy when you want to subset each element of the $.x$ argument. If the $.f$ argument to a map function is set equal to a string, let's say "name", then purrr extracts the "name" element from every element of $.x$.
+
+This is a really common situation you find yourself in when you work with nested lists. For example, if we have a list of where every element contains an $a$ and $b$ element:
+
+$$list_of_results <- list(\\
+  list(a = 1, b = "A"), \\
+  list(a = 2, b = "C"), \\
+  list(a = 3, b = "D")\\
+)$$
+
+We might want to pull out the $a$ element from every entry. We could do it with the string shortcut like this:
+
+$$map(list\_of\_results, "a")$$
+Now take our list of regresssion models:
+
+$$map(cyl, ~ lm(mpg ~ wt, data = .))$$
+
+It might be nice to extract the slope coefficient from each model. You'll do this in a few steps: first fit the models, then get the coefficients from each model using the $coef()$ function, then pull out the $wt$ estimate using the string shortcut.
+
+```{r}
+# Save the result from the previous exercise to the variable models
+models <- map(cyl, ~ lm(mpg ~ wt, data = .))
+# Use map and coef to get the coefficients for each model: coefs
+coefs <- map(models, coef)
+# Use string shortcut to extract the wt coefficient 
+map(coefs, "wt")
+```
+
+#### Using a numeric vector
+
+Another useful shortcut for subsetting is to pass a numeric vector as the $.f$ argument. This works just like passing a string but subsets by index rather than name. For example, with your previous list_of_results:
+
+$$ list_of_results <- list(\\
+  list(a = 1, b = "A"), \\
+  list(a = 2, b = "C"), \\
+  list(a = 3, b = "D")\\
+)$$
+Another way to pull out the $a$ element from each list, is to pull out the first element:
+
+$map(list_of_results, 1)$
+
+Let's pull out the slopes from our models again, but this time using numeric subsetting. Also, since we are pulling out a single numeric value from each element, let's use $map_dbl()$.
+
+```{r}
+coefs <- map(models, coef)
+
+# use map_dbl with the numeric shortcut to pull out the second element
+map_dbl(coefs,2)
+```
+
+Putting it together with pipes
+
+$purrr$ also includes a pipe operator: $\%>\%$. The pipe operator is another shortcut that saves typing, but also increases readability. The explanation of the pipe operator is quite simple: $x \%>\% f(y)$ is another way of writing $f(x, y)$. That is, the left hand side of the pipe, $x$, becomes the first argument to the function, $f()$, on the right hand side of the pipe.
+
+Take a look at our code to get our list of models:
+
+$$cyl <- split(mtcars, mtcars$cyl) \\
+map(cyl, ~ lm(mpg ~ wt, data = .))$$
+
+We split the data frame $mtcars$ and save it as the variable $cyl$. We then pass $cyl$ as the first argument to map to fit the models. We could rewrite this using the pipe operator as:
+
+$$split(mtcars, mtcars$cyl) \%>\% 
+  map(~ lm(mpg ~ wt, data = .))$$
+  
+We read this as "split the data frame $mtcars$ on $cyl$, then use $map()$ on the result."
+
+One of the powerful things about the pipe is we can chain together many operations. Here is our complete code, written with pipes, instead assigning each step to a variable and using it in the next step:
+
+$$mtcars \%>\% \\
+  split(mtcars\$cyl) \%>\% \\
+  map(~ lm(mpg ~ wt, data = .)) \%>\% \\
+  map(coef) \%>\% \\
+  map_dbl("wt")$$
+  
+We've written some code in the editor to pull out the $R^2$ from each model. Rewrite the last two lines to use a pipe instead.
+
+```{r}
+# Define models (don't change)
+models <- mtcars %>% 
+  split(mtcars$cyl) %>%
+  map(~ lm(mpg ~ wt, data = .))
+
+# Rewrite to be a single command using pipes 
+# summaries <- map(models, summary)
+# map_dbl(summaries, "r.squared")
+summaries <- models %>%
+  map(summary) %>%
+  map_dbl("r.squared")
+```
+
+## Chapter 4 
+
+### Dealing with Failure
+
+safely() takes a function and returns a function.
+
+Other adverbs for unusual output include 
+
+safely(), captures the successful result or the error, always returns a list;
+
+possibly(), always succeeds, you give it a default value to return when there is an error;
+
+quietly(), captures printed output, messages, and warnings instead of capturing errors.
+
+```{r}
+library(purrr)
+# log_list <- map(long_list, log)
+# Error
+log_list <- map(long_list, safely(log))
+str(log_list)
+
+# safely returns $result and $error
+safe_log <- safely(log)
+safe_log(10)
+safe_log("a")
+
+```
+
+Creating a safe function
+
+$safely()$ is an adverb; it takes a verb and modifies it. That is, it takes a function as an argument and it returns a function as its output. The function that is returned is modified so it never throws an error (and never stops the rest of your computation!).
+
+Instead, it always returns a list with two elements:
+
+$result$ is the original result. If there was an error, this will be $NULL$.
+$error$ is an error object. If the operation was successful this will be $NULL$.
+
+Let's try to make the $readLines()$ function safe.
+
+```{r}
+# Create safe_readLines() by passing readLines() to safely()
+safe_readLines <- safely(readLines)
+
+# Call safe_readLines() on "http://example.org"
+example_lines <- safe_readLines("http://example.org")
+example_lines
+
+# Call safe_readLines() on "http://asdfasdasdkfjlda"
+nonsense_lines <- safe_readLines("http://asdfasdasdkfjlda")
+nonsense_lines
+```
+
+Using map safely
+
+One feature of $safely()$ is that it plays nicely with the $map()$ functions. Consider this list containing the two URLs from the last exercise, plus one additional URL to make things more interesting:
+
+$$urls <- list(\\
+  example = "http://example.org",\\
+  rproj = "http://www.r-project.org",\\
+  asdf = "http://asdfasdasdkfjlda"\\
+)$$
+We are interested in quickly downloading the HTML files at each URL. You might try:
+
+$$map(urls, readLines)$$
+But it results in an error, $Error in file(con, "r") : cannot open the connection$, and no output for any of the URLs. Go on, try it!
+
+We can solve this problem by using our safe_readLines() instead.
