@@ -18,7 +18,7 @@ group_by,
 gsub, 
 ifelse, 
 is.na, 
-left_join, 
+join, left_join, 
 paste, 
 rbind, 
 read_excel, 
@@ -91,7 +91,7 @@ df$\`Some Variable\` <- gsub(",", "", df$\`Some Variable\`)
 ### ifelse, is.na: Flag samples without value for variable
 df$\`newVariable\` <- ifelse(is.na(df$variable), FALSE, TRUE)
 
-### left_join: Join two dataframes (ie more columns)
+### join, left_join: Join two dataframes (ie more columns)
 df <- left_join(df, altDf, by = c("Var1" = "Var1", "Var2" = "Var2"))
 
 ### paste: Create new variable
