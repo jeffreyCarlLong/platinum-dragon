@@ -30,10 +30,7 @@ Title  |  Details |  Website
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
-**fs** | a cross-platform, uniform interface to file system operations | [fs](https://fs.r-lib.org/)
-**pkgdown 1.0.0** | build a website for your package | [Tidyverse](https://www.tidyverse.org/articles/2018/05/pkgdown-1-0-0/)
-**devtools 2.0.0** | Conscious uncoupling | [Tidyverse](https://www.tidyverse.org/articles/2018/10/devtools-2-0-0/)
-**ggplot2 3.0.0** | GT 2000 reverse dependencies | [Tidyverse](https://www.tidyverse.org/articles/2018/07/ggplot2-3-0-0/)
+**R101** | Fit linear regression models | [LIBD R Stats Club](http://research.libd.org/rstatsclub/2018/12/24/r_101/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+LIBDrstats+%28LIBD+rstats+club+--+rstats%29)
 **Why you should master the small multiple chart** | facet_wrap(~cylinders), facet_grid(Student ~ Married), or facet_wrap(~key, scales = 'free')| [Sharp Sight](https://www.sharpsightlabs.com/blog/master-small-multiple/)
 **Writing better R functions** | ggtitle(bquote("Crosstabs"\~.(dfname)\*.(aaa)\~"by"\*.(bbb))); deparse, substitute function, check 4 loaded library | [Chuck Powell](https://ibecav.github.io/betterfunctions/)
 **Writing better R functions part two** | plot types dodge (side), stack, fill (percentage) | [Chuck Powell](https://ibecav.github.io/betterfunctions2/)
