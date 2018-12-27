@@ -1,4 +1,4 @@
-## Something Else R
+## R Blogs of Interest
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
