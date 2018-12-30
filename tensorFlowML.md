@@ -1,5 +1,5 @@
 # TensorFlow, Machine Learning Blogs, N'at 
-## (AKA The Critical Path)
+## AKA The Critical Path
 
 The following is a list of blogs and resources which I discovered on my machine learning (ML) journey.
 
