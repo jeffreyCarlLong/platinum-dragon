@@ -65,8 +65,10 @@ dfRmNa <- drop_na(df, "Var")
 
 #### drop na for cols
 AE <- read_csv("ae.csv")
+
 DT_AE <- as.data.table(AE)
-IBD_AE <- DT_AE[,which(unlist(lapply(DT_AE, function(x)!all(is.na(x))))),with=F]
+
+CONDENSED_AE <- DT_AE[,which(unlist(lapply(DT_AE, function(x)!all(is.na(x))))),with=F]
 
 ### filter Variable on Value
 df <- filter(df, df$\`Variable Name\` == "Value")
