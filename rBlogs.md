@@ -3,6 +3,7 @@
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
 **The Shiny Module Design Pattern** | AgileR- Adrean Waddell-ish | [William Doane](https://drdoane.com/the-shiny-module-design-pattern/)
+**Create R Markdown reports and presentations even better with these 3 practical tips** | infinite_moon_reader() | [jozefhajnala.gitlab.io](https://jozefhajnala.gitlab.io/r/r909-rmarkdown-tips/)
 **R101** | Fit linear regression models | [LIBD R Stats Club](http://research.libd.org/rstatsclub/2018/12/24/r_101/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+LIBDrstats+%28LIBD+rstats+club+--+rstats%29)
 **Why you should master the small multiple chart** | facet_wrap(~cylinders), facet_grid(Student ~ Married), or facet_wrap(~key, scales = 'free')| [Sharp Sight](https://www.sharpsightlabs.com/blog/master-small-multiple/)
 **Writing better R functions** | ggtitle(bquote("Crosstabs"\~.(dfname)\*.(aaa)\~"by"\*.(bbb))); deparse, substitute function, check 4 loaded library | [Chuck Powell](https://ibecav.github.io/betterfunctions/)
