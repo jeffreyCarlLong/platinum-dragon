@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Unit Tests in R** | testthat, RUnit, an alternative | [Win-Vector Blog](http://www.win-vector.com/blog/2019/03/unit-tests-in-r/)
 **Building Big Shiny Apps -- A Workflow (1/2)** | view your Shiny app as a tree | [The R Task Force](https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-1/)
 **The Shiny Module Design Pattern** | AgileR- Adrean Waddell-ish | [William Doane](https://drdoane.com/the-shiny-module-design-pattern/)
 **Create R Markdown reports and presentations even better with these 3 practical tips** | infinite_moon_reader() | [jozefhajnala.gitlab.io](https://jozefhajnala.gitlab.io/r/r909-rmarkdown-tips/)
