@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**survivalists [a Riddler’s riddle]** | multi-probability survival rate | [Xi'an's OG Blog](https://xianblog.wordpress.com/2019/04/22/survivalists-a-riddlers-riddle/)
 **How to easily automate R analysis, modeling and development work using CI/CD, with working examples**  | R Continuous Integration Continuous Deployment (CI CD) | [jhR_r106-r-package-gitlab-ci](https://jozefhajnala.gitlab.io/r/r106-r-package-gitlab-ci/)
 **Shiny Dashboard Tutorial** | Upgrading Shiny Apps to Dashboards | [RStudio GitHub- Structure section](https://rstudio.github.io/shinydashboard/structure.html)
 **Unit Tests in R** | testthat, RUnit, an alternative | [Win-Vector Blog](http://www.win-vector.com/blog/2019/03/unit-tests-in-r/)
