@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Playing with dimensions: from Clustering, PCA, t-SNE... to Carl Sagan!** | Rtsne and caret | [https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/](https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/)
 **survivalists [a Riddler’s riddle]** | multi-probability survival rate | [Xi'an's OG Blog](https://xianblog.wordpress.com/2019/04/22/survivalists-a-riddlers-riddle/)
 **How to easily automate R analysis, modeling and development work using CI/CD, with working examples**  | R Continuous Integration Continuous Deployment (CI CD) | [jhR_r106-r-package-gitlab-ci](https://jozefhajnala.gitlab.io/r/r106-r-package-gitlab-ci/)
 **Shiny Dashboard Tutorial** | Upgrading Shiny Apps to Dashboards | [RStudio GitHub- Structure section](https://rstudio.github.io/shinydashboard/structure.html)
