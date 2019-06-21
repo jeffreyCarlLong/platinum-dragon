@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Shiny apps need more info! – our new shiny.info package** | R Shiny Info | [](https://appsilon.com/more-info-for-shiny-apps/)
 **Set Analysis: A face off between Venn diagrams and UpSet plots** | UpSet plots like MAPS | [littleMissData](https://www.littlemissdata.com/blog/set-analysis)
 **Playing with dimensions: from Clustering, PCA, t-SNE... to Carl Sagan!** | Rtsne and caret | [https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/](https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/)
 **survivalists [a Riddler’s riddle]** | multi-probability survival rate | [Xi'an's OG Blog](https://xianblog.wordpress.com/2019/04/22/survivalists-a-riddlers-riddle/)
