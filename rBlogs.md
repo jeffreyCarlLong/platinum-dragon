@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**A Gentle Introduction to tidymodels** | Parsnip Modeling | [R Views](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
 **Shiny apps need more info! – our new shiny.info package** | R Shiny Info | [appsilon.com](https://appsilon.com/more-info-for-shiny-apps/)
 **Set Analysis: A face off between Venn diagrams and UpSet plots** | UpSet plots like MAPS | [littleMissData](https://www.littlemissdata.com/blog/set-analysis)
 **Playing with dimensions: from Clustering, PCA, t-SNE... to Carl Sagan!** | Rtsne and caret | [https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/](https://blog.datascienceheroes.com/playing-with-dimensions-from-clustering-pca-t-sne-to-carl-sagan/)
