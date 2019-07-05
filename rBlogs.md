@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**shinyApp(), runApp(), shinyAppDir(), and a fourth option** | Shiny Jazz | [rTask](https://rtask.thinkr.fr/blog/shinyapp-runapp-shinyappdir-difference/)
 **Exploring Categorical Data With Inspectdf** | Factor Analysis | [Alastair Rushworth](https://alastairrushworth.github.io/Exploring-categorical-data-with-inspectdf/)
 **A Gentle Introduction to tidymodels** | Parsnip Modeling | [R Views](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
 **Shiny apps need more info! – our new shiny.info package** | R Shiny Info | [appsilon.com](https://appsilon.com/more-info-for-shiny-apps/)
