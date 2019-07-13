@@ -2,6 +2,9 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Rmd first: When development starts with documentation** | R Markdown | [The R Task Force](https://rtask.thinkr.fr/blog/rmd-first-when-development-starts-with-documentation/)
+**Exploring Categorical Data With Inspectdf** | Dataframe Factor Visualization | [Alastair Rushworth](https://alastairrushworth.github.io/Exploring-categorical-data-with-inspectdf/)
+**CLEAN, CONSISTENT COLUMN NAMES** | dplyr regex scripts | [William Doane](https://drdoane.com/clean-consistent-column-names/)
 **R Plumber API in a Docker container? Of course, but security matters…** | PlumbR, Docker, AHUB- Analysis | [QUNIS](https://qunis.de/r-plumber-api-in-a-docker-container-of-course-but-security-matters/)
 **shinyApp(), runApp(), shinyAppDir(), and a fourth option** | Shiny Jazz | [rTask](https://rtask.thinkr.fr/blog/shinyapp-runapp-shinyappdir-difference/)
 **Exploring Categorical Data With Inspectdf** | Factor Analysis | [Alastair Rushworth](https://alastairrushworth.github.io/Exploring-categorical-data-with-inspectdf/)
