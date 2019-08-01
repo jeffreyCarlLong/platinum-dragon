@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**"Real life" DAG simulation using the simMixedDAG package** | DAG surgery | [R on Just be-cause](https://iyarlin.github.io/2019/07/23/mixed_dag_simulation_using_simmixeddag_package/)
 **Network model trees** | Network Visualization | [Achim Zeileis](https://eeecon.uibk.ac.at/~zeileis/news/networktree/)
 **Multilevel Models in R** | Data Analysis | [datascienceplus](https://datascienceplus.com/multilevel-models-in-r/)
 **Rmd first: When development starts with documentation** | R Markdown | [The R Task Force](https://rtask.thinkr.fr/blog/rmd-first-when-development-starts-with-documentation/)
