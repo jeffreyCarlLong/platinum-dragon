@@ -2,6 +2,8 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Network model trees** | Network Visualization | [Achim Zeileis](https://eeecon.uibk.ac.at/~zeileis/news/networktree/)
+**Multilevel Models in R** | Data Analysis | [datascienceplus](https://datascienceplus.com/multilevel-models-in-r/)
 **Rmd first: When development starts with documentation** | R Markdown | [The R Task Force](https://rtask.thinkr.fr/blog/rmd-first-when-development-starts-with-documentation/)
 **Exploring Categorical Data With Inspectdf** | Dataframe Factor Visualization | [Alastair Rushworth](https://alastairrushworth.github.io/Exploring-categorical-data-with-inspectdf/)
 **CLEAN, CONSISTENT COLUMN NAMES** | dplyr regex scripts | [William Doane](https://drdoane.com/clean-consistent-column-names/)
