@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Likert Scale Survey: from googleform to #rstats graph** | Knowledge Graph it | [Emma Rand](https://buzzrbeeline.blog/2019/08/04/likert-scale-survey-from-google-formto-rstats-graph/)
 **Causal inference with DAGs in R** | DAGs | [Paolo Eusebi](https://paoloeusebi.blog/2019/08/06/causal-inference-with-dags-in-r/)
 **"Real life" DAG simulation using the simMixedDAG package** | DAG surgery | [R on Just be-cause](https://iyarlin.github.io/2019/07/23/mixed_dag_simulation_using_simmixeddag_package/)
 **Network model trees** | Network Visualization | [Achim Zeileis](https://eeecon.uibk.ac.at/~zeileis/news/networktree/)
