@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Deploying a Trained Supervised ML Model** | caret prediction | [Draper and Dash](https://www.draperanddash.com/machinelearning/2019/08/deploying-a-trained-supervised-ml-model/)
 **Time Series Analysis with Wind Resource Assessment in R** | Windrose plots | [DataSciencePlus](https://datascienceplus.com/time-series-analysis-with-wind-resource-assessment-in-r/)
 **Likert Scale Survey: from googleform to #rstats graph** | Knowledge Graph it | [Emma Rand](https://buzzrbeeline.blog/2019/08/04/likert-scale-survey-from-google-formto-rstats-graph/)
 **Causal inference with DAGs in R** | DAGs | [Paolo Eusebi](https://paoloeusebi.blog/2019/08/06/causal-inference-with-dags-in-r/)
