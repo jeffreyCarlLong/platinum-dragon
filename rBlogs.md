@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**What is vtreat?** | ML and predictive modeling | [Win-Vector](http://www.win-vector.com/blog/2019/08/what-is-vtreat/)
 **Deploying a Trained Supervised ML Model** | caret prediction | [Draper and Dash](https://www.draperanddash.com/machinelearning/2019/08/deploying-a-trained-supervised-ml-model/)
 **A Comprehensive Introduction to Working with Databases using R** | DBI, modeldb, tidypredict_fit, tidypredict_sql | [Rsquared Academy](https://blog.rsquaredacademy.com/working-with-databases-using-r/)
 **Time Series Analysis with Wind Resource Assessment in R** | Windrose plots | [DataSciencePlus](https://datascienceplus.com/time-series-analysis-with-wind-resource-assessment-in-r/)
