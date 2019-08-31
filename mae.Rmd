@@ -1,0 +1,163 @@
+---
+title: "Multiassay Experiments"
+author: "Jeffrey Long"
+date: "8/31/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Libraries
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("MultiAssayExperiment")
+
+library(MultiAssayExperiment)
+library(GenomicRanges)
+library(SummarizedExperiment)
+# install.packages("RaggedExperiment")   ## Not available for R v.3.5.1, v.3.5.3, or v.3.6.0
+# library(RaggedExperiment) 
+```
+
+
+## Vignettes
+
+[MAE Cheatsheet](http://127.0.0.1:20915/library/MultiAssayExperiment/doc/MultiAssayExperiment_cheatsheet.pdf)
+
+[MultiAssay Experiment- The Integrative Bioconductor Container](http://127.0.0.1:20915/library/MultiAssayExperiment/doc/MultiAssayExperiment.html)
+
+
+
+```{r}
+browseVignettes("MultiAssayExperiment")
+
+
+```
+
+
+### MAE- The Integrative Bioconductor Container
+
+
+```{r}
+empty <- MultiAssayExperiment()
+empty
+slotNames(empty)
+class(experiments(empty)) # ExperimentList
+
+# Primary Data- colData
+patient.data <- data.frame(sex=c("M", "F", "M", "F"),
+    age=38:41,
+    row.names=c("Jack", "Jill", "Bob", "Barbara"))
+patient.data
+class(sampleMap(empty)) # DataFrame
+
+# Instances of sampleMap without colData
+exprss1 <- matrix(rnorm(16), ncol = 4,
+        dimnames = list(sprintf("ENST00000%i", sample(288754:290000, 4)),
+                c("Jack", "Jill", "Bob", "Bobby")))
+exprss2 <- matrix(rnorm(12), ncol = 3,
+        dimnames = list(sprintf("ENST00000%i", sample(288754:290000, 4)),
+                c("Jack", "Jane", "Bob")))
+doubleExp <- list("methyl 2k"  = exprss1, "methyl 3k" = exprss2)
+simpleMultiAssay <- MultiAssayExperiment(experiments=doubleExp)
+simpleMultiAssay
+colData(simpleMultiAssay)
+# Providing colData
+simpleMultiAssay2 <- MultiAssayExperiment(experiments=doubleExp, colData=patient.data)
+simpleMultiAssay2
+colData(simpleMultiAssay2)
+```
+
+### Key Points
+
+* one row of $colData$ can map to zero, one, or more columns in any $ExperimentList$ element
+
+* each row of $colData$ must map to at least one column in at least one $ExperimentList$ element
+
+* each column of each $ExperimentList$ element must map to exactly one row of $colData$.
+
+These relationships are defined by the $sampleMap$.
+
+```{r}
+# Creating an MAE
+
+# Expression data
+(arraydat <- matrix(seq(101, 108), ncol=4,
+    dimnames=list(c("ENST00000294241", "ENST00000355076"),
+    c("array1", "array2", "array3", "array4"))))
+coldat <- data.frame(slope53=rnorm(4),
+    row.names=c("array1", "array2", "array3", "array4"))
+
+exprdat <- SummarizedExperiment(arraydat, colData=coldat)
+exprdat
+# Map colData to exprdata sample names
+(exprmap <- data.frame(primary=rownames(patient.data)[c(1, 2, 4, 3)],
+                       colname=c("array1", "array2", "array3", "array4"),
+                       stringsAsFactors = FALSE))
+
+# Methylation data as a matrix
+(methyldat <-
+   matrix(1:10, ncol=5,
+          dimnames=list(c("ENST00000355076", "ENST00000383706"),
+                        c("methyl1", "methyl2", "methyl3",
+                          "methyl4", "methyl5"))))
+# Map colData to methyldat
+(methylmap <- data.frame(primary = c("Jack", "Jack", "Jill", "Barbara", "Bob"),
+    colname = c("methyl1", "methyl2", "methyl3", "methyl4", "methyl5"),
+    stringsAsFactors = FALSE))
+
+# microRNA data
+(microdat <- matrix(201:212, ncol=3,
+                    dimnames=list(c("hsa-miR-21", "hsa-miR-191",
+                                    "hsa-miR-148a", "hsa-miR148b"),
+                                  c("micro1", "micro2", "micro3"))))
+# Map colData sample names to microdat sample names
+(micromap <- data.frame(primary = c("Jack", "Barbara", "Bob"),
+    colname = c("micro1", "micro2", "micro3"), stringsAsFactors = FALSE))
+
+# Finally create a dataset of class RangedSummarizedExperiment
+nrows <- 5; ncols <- 4
+counts <- matrix(runif(nrows * ncols, 1, 1e4), nrows)
+rowRanges <- GRanges(rep(c("chr1", "chr2"), c(2, nrows - 2)),
+    IRanges(floor(runif(nrows, 1e5, 1e6)), width=100),
+    strand=sample(c("+", "-"), nrows, TRUE),
+    feature_id=sprintf("ID\\%03d", 1:nrows))
+names(rowRanges) <- letters[1:5]
+colData <- DataFrame(Treatment=rep(c("ChIP", "Input"), 2),
+    row.names= c("mysnparray1", "mysnparray2", "mysnparray3", "mysnparray4"))
+rse <- SummarizedExperiment(assays=SimpleList(counts=counts),
+    rowRanges=rowRanges, colData=colData)
+# Map colData samples to RangedSummarizedExperiment
+(rangemap <-
+    data.frame(primary = c("Jack", "Jill", "Bob", "Barbara"),
+    colname = c("mysnparray1", "mysnparray2", "mysnparray3", "mysnparray4"),
+        stringsAsFactors = FALSE))
+
+# sampleMap Creation
+listmap <- list(exprmap, methylmap, micromap, rangemap)
+names(listmap) <- c("Affy", "Methyl 450k", "Mirna", "CNV gistic")
+listmap
+# Convenience function listToMap to convert to dataframe
+dfmap <- listToMap(listmap)
+dfmap
+# Can revert dfmap to list
+mapToList(dfmap, "assay")
+#########################################
+# Experimental data as a list()
+objlist <- list("Affy" = exprdat, "Methyl 450k" = methyldat,
+    "Mirna" = microdat, "CNV gistic" = rse)
+# Creation of the MAE class object
+myMultiAssay <- MultiAssayExperiment(objlist, patient.data, dfmap)
+myMultiAssay
+experiments(myMultiAssay)
+colData(myMultiAssay)
+sampleMap(myMultiAssay)
+metadata(myMultiAssay)
+myMultiAssay <- MultiAssayExperiment(objlist, patient.data, dfmap)
+myMultiAssay
+```
