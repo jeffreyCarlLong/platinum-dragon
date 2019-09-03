@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Visualizing the relationship between multiple variables** | Data Analysis | [Statistical Odds & Ends](https://statisticaloddsandends.wordpress.com/2019/08/24/visualizing-the-relationship-between-multiple-variables/)
 **R Tensorflow Multiple Linear Regression** | Machine Learning | [Data Science, Data Mining and Predictive Analytics](https://blog.alpha-analysis.com/2019/08/r-tensorflow-multiple-linear-regression.html)
 **What is vtreat?** | ML and predictive modeling | [Win-Vector](http://www.win-vector.com/blog/2019/08/what-is-vtreat/)
 **Deploying a Trained Supervised ML Model** | caret prediction | [Draper and Dash](https://www.draperanddash.com/machinelearning/2019/08/deploying-a-trained-supervised-ml-model/)
