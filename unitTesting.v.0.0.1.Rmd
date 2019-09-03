@@ -1,0 +1,137 @@
+---
+title: "Unit Testing"
+author: "Jeffrey Long"
+date: "9/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Libraries
+
+```{r}
+# setwd("~/software/R/unitTesting")
+install.packages("testthat")
+library(testthat)
+```
+
+
+## Resources
+
+[Unit Testing in R](https://towardsdatascience.com/unit-testing-in-r-68ab9cc8d211)
+
+[Jim Hester's lintr package](https://github.com/jimhester/lintr)
+
+[Intro to Unit Testing in R](https://katherinemwood.github.io/post/testthat/)
+
+[testthat Reference](https://testthat.r-lib.org/reference/index.html)
+
+[testthat Package Doc](https://cran.r-project.org/web/packages/testthat/testthat.pdf)
+
+
+[http://r-pkgs.had.co.nz/tests.html](http://r-pkgs.had.co.nz/tests.html)
+
+
+### From Unit Testing in R
+
+```{bash}
+
+cat > "~/software/R/unitTesting/increment.R"
+# Example for simple function to be tested
+#
+# 1. Change working directory
+# 2. Call: testthat::test_dir('tests') within RStudio or R
+
+increment <- function(value) {
+  value + 1
+}
+
+mkdir tests
+
+cat > "~/software/R/unitTestingtests/tests/test_increment.R"
+source("../increment.R", chdir = TRUE)   # NOT USED FOR PACKAGES
+library(testthat)
+
+test_that("single number", {
+  expect_equal(increment(-1), 0)
+  expect_equal(increment(0), 1)
+})
+
+test_that("vectors", {
+  expect_equal(increment(c(0,1)), c(1,2))
+})
+
+test_that("empty vector", {
+  expect_equal(increment(c()), c())
+})
+
+test_that("test NA", {
+  expect_true(is.na(increment(NA)))
+})
+```
+
+#### Running Tests
+
+```{r}
+
+testthat::test_dir("tests")
+
+```
+
+
+Structure of test declaration function is
+
+$testthat::test\_that(name, expression)$
+
+ * The first argument assigns the test a name for identifying it. 
+ 
+ * The second argument is an R expression which shall use the expect_* assertions. 
+ 
+ Whenever an assertion does not hold the test is aborted and marked as failed.
+
+
+### From Intro to Unit Testing in R
+
+[https://katherinemwood.github.io/post/testthat/](https://katherinemwood.github.io/post/testthat/)
+
+[https://github.com/katherinemwood/unit_testing](https://github.com/katherinemwood/unit_testing)
+
+
+```{r}
+print(testing_data)
+
+# Add context for testing
+context('testing data integrity') 
+
+# Check number of cols in our data equal the number of variables
+expect_equal(ncol(testing_data), 2)    # this one passes
+expect_equal(ncol(testing_data), 3)    # this one fails
+
+# Test the number of coefficients is equal
+expect_equal(length(test.mod$coefficients), 2)    # this one passes
+
+# Check for missing values
+expect_identical(testing_data, na.omit(testing_data))   # this one passes
+
+# expect_equivalent ignores attributes of comparators
+
+expect_that(testing_data, is_a('data.frame'))
+# same as
+expect_is(testing_data,'data.frame')
+
+# test  factor levels in data are in model
+expect_equivalent(levels(model_data$x), unlist(test.mod$xlevels))
+
+# test mean of group 1 equals intercept
+expect_equivalent(mean(model_data$y[model_data$x == 'c1']), test.mod$coefficients['(Intercept)'])
+
+# test printed values
+expect_that(even_odd(1), prints_text('odd'))     # this one passes
+expect_that(even_odd(2), prints_text('odd'))    # this one fails
+
+# group tests in a test file
+test_file('tests/test_dummy.R')
+
+
+```
