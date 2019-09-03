@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**R Tensorflow Multiple Linear Regression** | Machine Learning | [Data Science, Data Mining and Predictive Analytics](https://blog.alpha-analysis.com/2019/08/r-tensorflow-multiple-linear-regression.html)
 **What is vtreat?** | ML and predictive modeling | [Win-Vector](http://www.win-vector.com/blog/2019/08/what-is-vtreat/)
 **Deploying a Trained Supervised ML Model** | caret prediction | [Draper and Dash](https://www.draperanddash.com/machinelearning/2019/08/deploying-a-trained-supervised-ml-model/)
 **A Comprehensive Introduction to Working with Databases using R** | DBI, modeldb, tidypredict_fit, tidypredict_sql | [Rsquared Academy](https://blog.rsquaredacademy.com/working-with-databases-using-r/)
