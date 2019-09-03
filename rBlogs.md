@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Image segmentation with U-Net** | Image Analysis | [TensorFlow for R Blog](https://blogs.rstudio.com/tensorflow/posts/2019-08-23-unet/?mkt_tok=eyJpIjoiTlRNM05ERXlZMlZsWkdZeCIsInQiOiJkZEhEM05acXRidStqd2oyd2JPRVg0ekxUU0M0XC82Zk94QU5Jek9JVHdnRlE1ajhMU3ZqN3Vrdkx1aFVTeHFGQXdqMURhSGE5eWE4M0lHSmpqcUZNQTZTQXlOcWRoSkZRMFMzcjlmS0JyaFp3M1BRVzYramF4SnE4RmlcL1ZQQ3BLIn0%3D)
 **Visualizing the relationship between multiple variables** | Data Analysis | [Statistical Odds & Ends](https://statisticaloddsandends.wordpress.com/2019/08/24/visualizing-the-relationship-between-multiple-variables/)
 **R Tensorflow Multiple Linear Regression** | Machine Learning | [Data Science, Data Mining and Predictive Analytics](https://blog.alpha-analysis.com/2019/08/r-tensorflow-multiple-linear-regression.html)
 **What is vtreat?** | ML and predictive modeling | [Win-Vector](http://www.win-vector.com/blog/2019/08/what-is-vtreat/)
