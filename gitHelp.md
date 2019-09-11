@@ -26,6 +26,13 @@ $ git branch feature-adding_new_data -u origin/dev
 Branch 'test1' set up to track remote branch 'dev' from 'origin'.
 ```
 
+## Removing Added Files Before a Commit
+
+```
+$ git reset <file> 
+$ git reset      # to unstage all changes
+```
+
 ## Pushing Branches
 ```
 $ git push origin test1
