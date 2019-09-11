@@ -15,8 +15,9 @@ $ git branch --all
 ## Changing Branches
 
 ```
-$ git checkout -b feature-adding_data
-Switched to a new branch 'feature-adding_data'
+$ git checkout feature-adding_data
+$ git checkout -b feature-adding_new_data   # creates and switches to new branch
+Switched to a new branch 'feature-adding_new_data'
 ```
 
 ## Tracking Branches
