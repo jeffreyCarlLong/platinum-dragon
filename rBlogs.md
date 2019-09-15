@@ -2,6 +2,8 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Tell Me a Story: How to Generate Textual Explanations for Predictive Models** | Variable contribution to prediction with Random Forest | [smarterpoland.pl](http://smarterpoland.pl/index.php/2019/09/tell-me-a-story-how-to-generate-textual-explanations-for-predictive-models/)
+**Survival analysis with strata, clusters, frailties and competing risks in in Finalfit** | forcats, KM, cox.zph scaled Schoenfeld residuals, strata Hazard Ratios hr_plot | [DataSurg](https://www.datasurg.net/2019/09/12/survival-analysis-with-strata-clusters-frailties-and-competing-risks-in-in-finalfit/)
 **Image segmentation with U-Net** | Image Analysis | [TensorFlow for R Blog](https://blogs.rstudio.com/tensorflow/posts/2019-08-23-unet/?mkt_tok=eyJpIjoiTlRNM05ERXlZMlZsWkdZeCIsInQiOiJkZEhEM05acXRidStqd2oyd2JPRVg0ekxUU0M0XC82Zk94QU5Jek9JVHdnRlE1ajhMU3ZqN3Vrdkx1aFVTeHFGQXdqMURhSGE5eWE4M0lHSmpqcUZNQTZTQXlOcWRoSkZRMFMzcjlmS0JyaFp3M1BRVzYramF4SnE4RmlcL1ZQQ3BLIn0%3D)
 **Visualizing the relationship between multiple variables** | Data Analysis | [Statistical Odds & Ends](https://statisticaloddsandends.wordpress.com/2019/08/24/visualizing-the-relationship-between-multiple-variables/)
 **R Tensorflow Multiple Linear Regression** | Machine Learning | [Data Science, Data Mining and Predictive Analytics](https://blog.alpha-analysis.com/2019/08/r-tensorflow-multiple-linear-regression.html)
