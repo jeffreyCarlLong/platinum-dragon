@@ -8,6 +8,8 @@ Title  |  Details |  Website
 **Data Science, Machine Learning and Predictive Analytics** | R TensorFlow, Deep Neural Nets | [Alpha Analysis](https://blog.alpha-analysis.com/2019/09/r-tensorflow-deep-neural-network.html)
 **Preparing Data for Supervised Classification** | vtreat | [Win-Vector](http://www.win-vector.com/blog/2019/09/preparing-data-for-supervised-classification/)
 **Drake, Docker, and Gitlab-CI** | drake is make, use it and be smarter. | [Noam Ross](https://www.noamross.net/2019/09/24/drake-docker-and-gitlab-ci/), [Drake Manual](https://ropenscilabs.github.io/drake-manual/), [rOpenSci](https://docs.ropensci.org/drake/)
+
+**Illuminating the Illuminated Part One: A First Look at the Voynich Manuscript** | Esoteric NLP | [Weird Data Science](https://www.weirddatascience.net/index.php/2019/09/26/illuminating-the-illuminated-a-first-look-at-the-voynich-manuscript/)
 **d3po: R package for easy interactive D3 visualization with Shiny** | Highcharts, r2d3 | [Pacha](https://pacha.hk/blog/2019/09/22/d3po-r-package-for-easy-interactive-d3-visualization-with-shiny/)
 **Tell Me a Story: How to Generate Textual Explanations for Predictive Models** | Variable contribution to prediction with Random Forest | [smarterpoland.pl](http://smarterpoland.pl/index.php/2019/09/tell-me-a-story-how-to-generate-textual-explanations-for-predictive-models/)
 **Doing Meta Analysis in R** | dmetar, statistical models begin in chapter 4, random effects, forest plots, between study heterogeneity, subgroup analysis, meta-regression bias, networks, multilevel, power | [Bookdown](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
