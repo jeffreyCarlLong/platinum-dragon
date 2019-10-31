@@ -2,6 +2,11 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**The Differences between Artificial Intelligence and Augmented Intelligence** | AI v. IA, Why Shiny | [Appsilon Data Science](https://appsilon.com/decision-making-support-systems-3-differences-between-ia-and-ai/?nabe=6422722626977792:1)
+**Introducing Dash Bio for R** | Javascript dashboards in R | [Modern Data](https://moderndata.plot.ly/introducing-dash-bio-for-r/)
+**Data Science, Machine Learning and Predictive Analytics** | R TensorFlow, Deep Neural Nets | [Alpha Analysis](https://blog.alpha-analysis.com/2019/09/r-tensorflow-deep-neural-network.html)
+**Preparing Data for Supervised Classification** | vtreat | [Win-Vector](http://www.win-vector.com/blog/2019/09/preparing-data-for-supervised-classification/)
+**d3po: R package for easy interactive D3 visualization with Shiny** | Highcharts, r2d3 | [Pacha](https://pacha.hk/blog/2019/09/22/d3po-r-package-for-easy-interactive-d3-visualization-with-shiny/)
 **Tell Me a Story: How to Generate Textual Explanations for Predictive Models** | Variable contribution to prediction with Random Forest | [smarterpoland.pl](http://smarterpoland.pl/index.php/2019/09/tell-me-a-story-how-to-generate-textual-explanations-for-predictive-models/)
 **Doing Meta Analysis in R** | dmetar, statistical models begin in chapter 4, random effects, forest plots, between study heterogeneity, subgroup analysis, meta-regression bias, networks, multilevel, power | [Bookdown](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
 **Feature-based time series analysis]** | tsibble, feasts, hdrscatterplot, PCA | [Rob J Hyndman](https://robjhyndman.com/hyndsight/fbtsa/)
