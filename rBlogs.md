@@ -10,6 +10,7 @@ Title  |  Details |  Website
 **Drake, Docker, and Gitlab-CI** | drake is make, use it and be smarter. | [Noam Ross](https://www.noamross.net/2019/09/24/drake-docker-and-gitlab-ci/), [Drake Manual](https://ropenscilabs.github.io/drake-manual/), [rOpenSci](https://docs.ropensci.org/drake/)
 **Handling dates and times in R: a free online course** | LinkedIn Learning | [Revolution Analytics](https://blog.revolutionanalytics.com/2019/09/handling-dates-and-times-in-r.html)
 **Why Do We Plot Predictions on the x-axis?** | ideal linear model | [Win-Vector](http://www.win-vector.com/blog/2019/09/why-do-we-plot-predictions-on-the-x-axis/)
+**Tidy forecasting in R** | tidyverse, lubridate, tsibble, fable (hilo, autoplot, ARIMA, ETS) | [Rob J Hyndman](https://robjhyndman.com/hyndsight/fable/)
 **Illuminating the Illuminated Part One: A First Look at the Voynich Manuscript** | Esoteric NLP | [Weird Data Science](https://www.weirddatascience.net/index.php/2019/09/26/illuminating-the-illuminated-a-first-look-at-the-voynich-manuscript/)
 **Just Quickly: The unexpected use of functions as arguments** | worlds within worlds | [Credibly Curious](https://www.njtierney.com/post/2019/09/29/unexpected-function/)
 **d3po: R package for easy interactive D3 visualization with Shiny** | Highcharts, r2d3 | [Pacha](https://pacha.hk/blog/2019/09/22/d3po-r-package-for-easy-interactive-d3-visualization-with-shiny/)
