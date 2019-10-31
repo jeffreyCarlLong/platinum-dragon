@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Time series forecasting with random forest** | ML, longitudinal data | [Statworx](https://www.statworx.com/de/blog/time-series-forecasting-with-random-forest/)
 **The Differences between Artificial Intelligence and Augmented Intelligence** | AI v. IA, Why Shiny | [Appsilon Data Science](https://appsilon.com/decision-making-support-systems-3-differences-between-ia-and-ai/?nabe=6422722626977792:1)
 **Introducing Dash Bio for R** | Javascript dashboards in R | [Modern Data](https://moderndata.plot.ly/introducing-dash-bio-for-r/)
 **Data Science, Machine Learning and Predictive Analytics** | R TensorFlow, Deep Neural Nets | [Alpha Analysis](https://blog.alpha-analysis.com/2019/09/r-tensorflow-deep-neural-network.html)
