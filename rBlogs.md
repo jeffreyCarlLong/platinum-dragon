@@ -8,7 +8,7 @@ Title  |  Details |  Website
 **Data Science, Machine Learning and Predictive Analytics** | R TensorFlow, Deep Neural Nets | [Alpha Analysis](https://blog.alpha-analysis.com/2019/09/r-tensorflow-deep-neural-network.html)
 **Preparing Data for Supervised Classification** | vtreat | [Win-Vector](http://www.win-vector.com/blog/2019/09/preparing-data-for-supervised-classification/)
 **Drake, Docker, and Gitlab-CI** | drake is make, use it and be smarter. | [Noam Ross](https://www.noamross.net/2019/09/24/drake-docker-and-gitlab-ci/), [Drake Manual](https://ropenscilabs.github.io/drake-manual/), [rOpenSci](https://docs.ropensci.org/drake/)
-
+**Handling dates and times in R: a free online course** | LinkedIn Learning | [Revolution Analytics](https://blog.revolutionanalytics.com/2019/09/handling-dates-and-times-in-r.html)
 **Illuminating the Illuminated Part One: A First Look at the Voynich Manuscript** | Esoteric NLP | [Weird Data Science](https://www.weirddatascience.net/index.php/2019/09/26/illuminating-the-illuminated-a-first-look-at-the-voynich-manuscript/)
 **d3po: R package for easy interactive D3 visualization with Shiny** | Highcharts, r2d3 | [Pacha](https://pacha.hk/blog/2019/09/22/d3po-r-package-for-easy-interactive-d3-visualization-with-shiny/)
 **Tell Me a Story: How to Generate Textual Explanations for Predictive Models** | Variable contribution to prediction with Random Forest | [smarterpoland.pl](http://smarterpoland.pl/index.php/2019/09/tell-me-a-story-how-to-generate-textual-explanations-for-predictive-models/)
