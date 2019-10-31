@@ -2,7 +2,8 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
-**Model Explanation with BMuCaret Shiny Application using the IML and DALEX Packages** | BmuCaret Shiny app | [Data Science Plus](https://datascienceplus.com/model-explanation-with-bmucaret-shiny-application-using-the-iml-and-dalex-packages/)
+**Model Explanation with BMuCaret Shiny Application using the IML and DALEX Packages** | Opensource Shiny app | [Data Science Plus](https://datascienceplus.com/model-explanation-with-bmucaret-shiny-application-using-the-iml-and-dalex-packages/)
+**Productionizing Shiny and Plumber with Pins** | pins are persistant data hooks | [R Views](https://rviews.rstudio.com/2019/10/17/deploying-data-with-pins/)
 **Time series forecasting with random forest** | ML, longitudinal data | [Statworx](https://www.statworx.com/de/blog/time-series-forecasting-with-random-forest/)
 **The Differences between Artificial Intelligence and Augmented Intelligence** | AI v. IA, Why Shiny | [Appsilon Data Science](https://appsilon.com/decision-making-support-systems-3-differences-between-ia-and-ai/?nabe=6422722626977792:1)
 **Introducing Dash Bio for R** | Javascript dashboards in R | [Modern Data](https://moderndata.plot.ly/introducing-dash-bio-for-r/)
