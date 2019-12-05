@@ -2,6 +2,8 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**JavaScript 4 Shiny - Field Notes** | Colin Fay, bubble.switch, DOM (document object model), native jQuery, simple AJAX (Asynchronous JavaScript and XML), This and Attributes | [thinkr.fr](https://connect.thinkr.fr/js4shinyfieldnotes/jquery.html#about)
+**An introduction to Causal inference** | DAGs, causal Markov kernels, Simpson's Paradox (Pear, Glymour, Jewel 2016, Ch. 1), computing causal effects | [Fabian Dablander- PhD Student Methods and Statistics](https://fabiandablander.com/r/Causal-Inference.html)
 **Model Explanation with BMuCaret Shiny Application using the IML and DALEX Packages** | Opensource Shiny app | [Data Science Plus](https://datascienceplus.com/model-explanation-with-bmucaret-shiny-application-using-the-iml-and-dalex-packages/)
 **Productionizing Shiny and Plumber with Pins** | pins are persistant data hooks, use them. | [R Views](https://rviews.rstudio.com/2019/10/17/deploying-data-with-pins/)
 **Time series forecasting with random forest** | ML, longitudinal data | [Statworx](https://www.statworx.com/de/blog/time-series-forecasting-with-random-forest/)
