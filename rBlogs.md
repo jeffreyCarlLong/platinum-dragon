@@ -9,6 +9,7 @@ Title  |  Details |  Website
 **How to make a precision recall curve in R** | caret, MLeval | [Into Bioinformatics](https://intobioinformatics.wordpress.com/2019/12/05/how-to-make-a-precision-recall-curve-in-r/)
 **parcats 0.0.1 released** | interactive alluvial plots | [datistics](https://www.datisticsblog.com/2019/12/parcats-0-0-1-released/)
 **R Shiny for beginners: annotated starter code** | coin tosses | [heads0rtai1ls](https://heads0rtai1s.github.io/2019/12/05/shiny-starter-code/)
+**Patch it up and send it out** | assembling plots, layouts, annotations | [Data Imaginist](https://www.data-imaginist.com/2019/patch-it-up-and-send-it-out/)
 **JavaScript 4 Shiny - Field Notes** | Colin Fay, bubble.switch, DOM (document object model), native jQuery, simple AJAX (Asynchronous JavaScript and XML), This and Attributes | [thinkr.fr](https://connect.thinkr.fr/js4shinyfieldnotes/jquery.html#about)
 **An introduction to Causal inference** | DAGs, causal Markov kernels, Simpson's Paradox (Pear, Glymour, Jewel 2016, Ch. 1), computing causal effects | [Fabian Dablander- PhD Student Methods and Statistics](https://fabiandablander.com/r/Causal-Inference.html)
 **Bayes' Rule** | Disease Testing | [Fong Chun Chan's Blog](http://tinyheero.github.io/2016/04/21/bayes-rule.html)
