@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Looker 7: Find true power in your data** | Business Intelligence and Big Data on Google Cloud Platform | [Looker](https://looker.com/)
 **From one Regression to Hundreds Within Seconds: A Shiny Specification Curve** | shiny_rdf_spec_curve, rdfanalysis | [An Accounting and Data Science Nerd's Corner](https://joachim-gassen.github.io/2019/12/from-one-regression-to-hundreds-within-seconds-a-shiny-specification-curve/)
 **a journey from basic prototype to production-ready Shiny dashboard** | shiny v. shinydashboard v. shiny.semantic v. custom | [Appsilon Data Science](https://appsilon.com/journey-from-basic-prototype-to-production-ready-shiny-dashboard/?nabe=4634331497365504:0)
 **Top 5 Data Science Technologies for Cloud + ML + Apps** | Shiny, H2O.ai, Docker, Git, ... | [Business Science](https://www.business-science.io/business/2019/12/09/data-science-technologies.html)
