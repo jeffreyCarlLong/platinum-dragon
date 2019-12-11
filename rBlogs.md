@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**a journey from basic prototype to production-ready Shiny dashboard** | shiny v. shinydashboard v. shiny.semantic v. custom | [Appsilon Data Science](https://appsilon.com/journey-from-basic-prototype-to-production-ready-shiny-dashboard/?nabe=4634331497365504:0)
 **JavaScript 4 Shiny - Field Notes** | Colin Fay, bubble.switch, DOM (document object model), native jQuery, simple AJAX (Asynchronous JavaScript and XML), This and Attributes | [thinkr.fr](https://connect.thinkr.fr/js4shinyfieldnotes/jquery.html#about)
 **An introduction to Causal inference** | DAGs, causal Markov kernels, Simpson's Paradox (Pear, Glymour, Jewel 2016, Ch. 1), computing causal effects | [Fabian Dablander- PhD Student Methods and Statistics](https://fabiandablander.com/r/Causal-Inference.html)
 **Bayes' Rule** | Disease Testing | [Fong Chun Chan's Blog](http://tinyheero.github.io/2016/04/21/bayes-rule.html)
