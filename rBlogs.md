@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Writing Frictionless R Package Wrappers** | devtools::create, document, check, usethis::use_mit_license, use_roxygen_md, use_package_doc, use_testthat, use_git, git_vaccinate | [rud.is](https://rud.is/b/2020/01/03/writing-frictionless-r-package-wrappers-building-a-basic-r-package/)
 **TSstudio** | time series analysis functions | [Rami Krispin](https://ramikrispin.github.io/TSstudio/index.html)
 **Looker 7: Find true power in your data** | Business Intelligence and Big Data on Google Cloud Platform | [Looker](https://looker.com/)
 **From one Regression to Hundreds Within Seconds: A Shiny Specification Curve** | shiny_rdf_spec_curve, rdfanalysis | [An Accounting and Data Science Nerd's Corner](https://joachim-gassen.github.io/2019/12/from-one-regression-to-hundreds-within-seconds-a-shiny-specification-curve/)
