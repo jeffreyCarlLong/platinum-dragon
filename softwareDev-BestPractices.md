@@ -24,4 +24,15 @@ issue link
 ### Unit Testing
 
 
+### Code Reviews
+
+
+### Pair Programming
+
+
 ### Continuous Integration and Continuous Deployment (CICD)
+
+
+### Travis
+
+
