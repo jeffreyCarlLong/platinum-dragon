@@ -10,9 +10,14 @@ authors: Jeffrey Long
 
 This project aims to outline key principles and components for developing software. As an R Community project, you will find many R programming references. Please feel free to add other references for Python, Julia, etc. as development groups combine efforts.
 
+R Shiny.
+
 ### GitHub 
 
 issue link
+
+
+### Software Specifications and Scope
 
 
 ### Agile Dev
@@ -34,5 +39,15 @@ issue link
 
 
 ### Travis
+
+
+### Acknowledgements
+
+R Community
+
+Aditi, Armen, Doug
+
+
+### References and Resources
 
 
