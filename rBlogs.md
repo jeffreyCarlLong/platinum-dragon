@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Multilevel Correlations: A New Method for Common Problems** | The Simpson’s Paradox | [Easy Stats](https://easystats.github.io/blog/posts/correlation_multilevel/)
 **M is for Mutate** | Factor variable derivation | [Deeply Trivial](http://www.deeplytrivial.com/2020/04/m-is-for-mutate.html)
 **Upset Plots** | MAE plotting of assays | [Kieran Healy](https://kieranhealy.org/blog/archives/2020/04/16/upset-plots/)
 **Writing Frictionless R Package Wrappers** | devtools::create, document, check, usethis::use_mit_license, use_roxygen_md, use_package_doc, use_testthat, use_git, git_vaccinate | [rud.is](https://rud.is/b/2020/01/03/writing-frictionless-r-package-wrappers-building-a-basic-r-package/)
