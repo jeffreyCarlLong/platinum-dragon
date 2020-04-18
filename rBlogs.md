@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Upset Plots** | MAE plotting of assays | [Kieran Healy](https://kieranhealy.org/blog/archives/2020/04/16/upset-plots/)
 **Writing Frictionless R Package Wrappers** | devtools::create, document, check, usethis::use_mit_license, use_roxygen_md, use_package_doc, use_testthat, use_git, git_vaccinate | [rud.is](https://rud.is/b/2020/01/03/writing-frictionless-r-package-wrappers-building-a-basic-r-package/)
 **TSstudio** | time series analysis functions | [Rami Krispin](https://ramikrispin.github.io/TSstudio/index.html)
 **Looker 7: Find true power in your data** | Business Intelligence and Big Data on Google Cloud Platform | [Looker](https://looker.com/)
