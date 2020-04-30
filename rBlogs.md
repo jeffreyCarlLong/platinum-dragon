@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**Upset Plots** | MultiAssayExperiment object visualization | [Kieran Healy](https://kieranhealy.org/blog/archives/2020/04/16/upset-plots/)
 **M is for mutate** | Derivation of new variables | [Deeply Trivial](http://www.deeplytrivial.com/2020/04/m-is-for-mutate.html)
 **Multilevel Correlations: A New Method for Common Problems** | The Simpson’s Paradox | [Easy Stats](https://easystats.github.io/blog/posts/correlation_multilevel/)
 **M is for Mutate** | Factor variable derivation | [Deeply Trivial](http://www.deeplytrivial.com/2020/04/m-is-for-mutate.html)
