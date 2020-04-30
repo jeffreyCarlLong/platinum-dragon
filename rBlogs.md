@@ -2,6 +2,7 @@
 
 Title  |  Details |  Website
 -------------------------------  |  ----------------------------  | ------------------------------
+**A package to download free Springer books during Covid-19 quarantine** | springerQuarantineBooksR | [Stats and R- Renan Xavier Cortes](https://www.statsandr.com/blog/a-package-to-download-free-springer-books-during-covid-19-quarantine/)
 **Causal Inference cheat sheet for data scientists** | Control, Treatment Groups | [Antoine Rebecq](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/)
 **New Orleans and Normalization** | Mardi Gras Peaks | [Kieran Healy](https://kieranhealy.org/blog/archives/2020/04/28/new-orleans-and-normalization/)
 **Visualizing Multilevel Networks with Graphlayouts** | layout_as_multilevel() | [Schochastics](http://blog.schochastics.net/post/visualizing-multilevel-networks-with-graphlayouts/)
