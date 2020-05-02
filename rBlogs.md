@@ -1,6 +1,6 @@
 ## R Blogs of Interest
 
-Title  |  Details |  Website
+Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
 **A package to download free Springer books during Covid-19 quarantine** | springerQuarantineBooksR | [Stats and R- Renan Xavier Cortes](https://www.statsandr.com/blog/a-package-to-download-free-springer-books-during-covid-19-quarantine/)
 **Causal Inference cheat sheet for data scientists** | Control, Treatment Groups | [Antoine Rebecq](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/)
