@@ -2,6 +2,7 @@
 
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
+**Lists are my secret weapon for reporting stats with knitr** | Splitting splits of splits | [Tristan Mahr - Higher Order Functions](https://www.tjmahr.com/lists-knitr-secret-weapon/)
 **bardr: Complete Works of William Shakespeare in Tidy Format** | [Gutenberg Publication](http://www.gutenberg.org/files/100/100-0.txt) | [CRAN](https://cran.r-project.org/web/packages/bardr/index.html)
 **How to build your own image recognition app with R! [Part 2]** | Shiny Bird App | [For-loops and piep kicks](https://forloopsandpiepkicks.wordpress.com/2021/03/30/how-to-build-your-own-image-recognition-app-with-r-part-2/)
 **R in Pharma with Procogia X-session Recordings Are Now Available** | Bioconductor support in RStudio Package Manager  | [rstudio::global(2021)](https://blog.rstudio.com/2021/03/16/r-in-pharma-with-procogia-x-session-recordings-are-now-available/)
