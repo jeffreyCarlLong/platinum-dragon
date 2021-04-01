@@ -2,6 +2,8 @@
 
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
+**bardr: Complete Works of William Shakespeare in Tidy Format** | [Gutenberg Publication](http://www.gutenberg.org/files/100/100-0.txt) | [CRAN](https://cran.r-project.org/web/packages/bardr/index.html)
+**How to build your own image recognition app with R! [Part 2]** | Shiny Bird App | [For-loops and piep kicks](https://forloopsandpiepkicks.wordpress.com/2021/03/30/how-to-build-your-own-image-recognition-app-with-r-part-2/)
 **R in Pharma with Procogia X-session Recordings Are Now Available** | Bioconductor support in RStudio Package Manager  | [rstudio::global(2021)](https://blog.rstudio.com/2021/03/16/r-in-pharma-with-procogia-x-session-recordings-are-now-available/)
 **A package to download free Springer books during Covid-19 quarantine** | springerQuarantineBooksR | [Stats and R- Renan Xavier Cortes](https://www.statsandr.com/blog/a-package-to-download-free-springer-books-during-covid-19-quarantine/)
 **Causal Inference cheat sheet for data scientists** | Control, Treatment Groups | [Antoine Rebecq](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/)
