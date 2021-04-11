@@ -1,0 +1,43 @@
+---
+title: "Evolve Monkey Speak"
+author: "Jeffrey C. Long"
+date: "2/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Docker
+
+[Docker tutorial](https://docker-curriculum.com/)
+
+[Docker install mac](https://docs.docker.com/docker-for-mac/install/)
+
+Start up Docker Desktop. Run through tutorial.
+
+
+```{bash, eval = FALSE}
+# Clone
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+# Build
+cd getting-started/
+docker build -t docker101tutorial .
+# Run
+docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+## Log into 
+# Share
+docker tag docker101tutorial jeffreylong/docker101tutorial
+docker push jeffreylong/docker101tutorial
+
+```
+
+### Repos
+
+Public Repo: 
+[https://hub.docker.com/repositories](https://hub.docker.com/repositories)
+
+Create a private repo: [https://hub.docker.com/u/jeffreylong/content](https://hub.docker.com/u/jeffreylong/content)
+
