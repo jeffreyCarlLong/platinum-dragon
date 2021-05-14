@@ -5,6 +5,7 @@ Title  |  Details |  Source
 **Dockerizing Shiny Applications** | Dockerfiles and Rocker | [Peter Solymos](https://hosting.analythium.io/dockerizing-shiny-applications/)
 **Principal component analysis (PCA) in R** | [Decision Trees](https://finnstats.com/index.php/2021/04/19/decision-trees-in-r/) | [finnstats](https://finnstats.com/index.php/2021/05/07/pca/)
 **RObservations #10: An Analysis of the Donner-Reed Party with Logistic Regression** | Tahoe | [bensstats](https://bensstats.wordpress.com/2021/05/06/robservations-10-an-analysis-of-the-donner-reed-party-with-logistic-regression/)
+**Logistic Regression R- Tutorial** | predict(mymodel, train, type = 'response') | [finnstats](https://finnstats.com/index.php/2021/04/28/logistic-regression-r/)
 **Getting Started: Website Building 101** | Building a new Wordpress website | [Wordpress Webinars](https://www.youtube.com/playlist?list=PLQFhxUeNFfdLLVYP5qI7CVZeQmsT7aV0t)
 **Deploying a CARET Machine Learning model as an API with Plumber** |  [YouTube Link](https://youtu.be/WMCkV_J5a0s) | [HUTSONS-HACKS](https://hutsons-hacks.info/deploying-a-caret-machine-learning-model-as-an-api-with-plumber)
 **Lists are my secret weapon for reporting stats with knitr** | Splitting splits of splits | [Tristan Mahr - Higher Order Functions](https://www.tjmahr.com/lists-knitr-secret-weapon/)
