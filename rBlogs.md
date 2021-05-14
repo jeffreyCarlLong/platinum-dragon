@@ -4,6 +4,7 @@ Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
 **Dockerizing Shiny Applications** | Dockerfiles and Rocker | [Peter Solymos](https://hosting.analythium.io/dockerizing-shiny-applications/)
 **Principal component analysis (PCA) in R** | [Decision Trees](https://finnstats.com/index.php/2021/04/19/decision-trees-in-r/) | [finnstats](https://finnstats.com/index.php/2021/05/07/pca/)
+**Wordpress** | Building a new website | [Webinars](https://www.youtube.com/playlist?list=PLQFhxUeNFfdLLVYP5qI7CVZeQmsT7aV0t)
 **Deploying a CARET Machine Learning model as an API with Plumber** |  [YouTube Link](https://youtu.be/WMCkV_J5a0s) | [HUTSONS-HACKS](https://hutsons-hacks.info/deploying-a-caret-machine-learning-model-as-an-api-with-plumber)
 **Lists are my secret weapon for reporting stats with knitr** | Splitting splits of splits | [Tristan Mahr - Higher Order Functions](https://www.tjmahr.com/lists-knitr-secret-weapon/)
 **bardr: Complete Works of William Shakespeare in Tidy Format** | [Gutenberg Publication](http://www.gutenberg.org/files/100/100-0.txt) | [CRAN](https://cran.r-project.org/web/packages/bardr/index.html)
