@@ -3,7 +3,7 @@
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
 **R tidymodels** | R Machine Learning Framework from Hadley Wickham | [tidymodels](https://www.tidymodels.org/start/models/)
-**easystats: Quickly investigate model performance** | Inspiration for tidymodels | [R Bloggers](https://www.r-bloggers.com/2021/07/easystats-quickly-investigate-model-performance/)
+**easystats: Quickly investigate model performance** | Inspiration to learn tidymodels | [R Bloggers](https://www.r-bloggers.com/2021/07/easystats-quickly-investigate-model-performance/)
 **Mixing centered and non-centered parameterizations in a hierarchical model with PyMC3** | Hierarchical models | [Joshua Cook](https://joshuacook.netlify.app/post/mixed-parameterization-hierarchical-model/)
 **Dockerizing Shiny Applications** | Dockerfiles and Rocker | [Peter Solymos](https://hosting.analythium.io/dockerizing-shiny-applications/)
 **Principal component analysis (PCA) in R** | [Decision Trees](https://finnstats.com/index.php/2021/04/19/decision-trees-in-r/) | [finnstats](https://finnstats.com/index.php/2021/05/07/pca/)
