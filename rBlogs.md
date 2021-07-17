@@ -2,6 +2,7 @@
 
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
+**Mixing centered and non-centered parameterizations in a hierarchical model with PyMC3** | Hierarchical models | [Joshua Cook](https://joshuacook.netlify.app/post/mixed-parameterization-hierarchical-model/)
 **Dockerizing Shiny Applications** | Dockerfiles and Rocker | [Peter Solymos](https://hosting.analythium.io/dockerizing-shiny-applications/)
 **Principal component analysis (PCA) in R** | [Decision Trees](https://finnstats.com/index.php/2021/04/19/decision-trees-in-r/) | [finnstats](https://finnstats.com/index.php/2021/05/07/pca/)
 **RObservations #10: An Analysis of the Donner-Reed Party with Logistic Regression** | Tahoe | [bensstats](https://bensstats.wordpress.com/2021/05/06/robservations-10-an-analysis-of-the-donner-reed-party-with-logistic-regression/)
