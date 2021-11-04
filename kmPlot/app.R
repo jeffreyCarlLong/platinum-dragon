@@ -18,8 +18,7 @@ groupchoices=unique(tdata$Group)
 ui <- fluidPage(
   titlePanel(h1("Patient Biomarker Survival Analysis in a Shiny App",
              br(),
-             h3("Created by Jeffrey Long - Bioinformatics Scientist"),
-             h4("For demonstration purposes only. This app contains toy data.")
+             h3("Created November 2021 by Jeffrey Long - Bioinformatics Scientist")
              )),
   mainPanel(
     
@@ -32,7 +31,10 @@ ui <- fluidPage(
                          ),
                 tabPanel("Data Table", DT::dataTableOutput("datatable")),
                 tabPanel("Summary", verbatimTextOutput("summary"))
-    )
+    ),
+    # Footer
+    hr(),
+    h5("For demonstration purposes only. This app contains toy data.")
   )
 )
 
