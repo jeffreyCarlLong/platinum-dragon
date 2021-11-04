@@ -5,20 +5,35 @@ library(shiny)
 library(dplyr)
 # install.packages("RcppArmadillo")
 library(RcppArmadillo)
+library(DT)
 
-tdata <- read_tsv("tdata2.txt")
+# bash script to cut column 6
+# cat tdata2.txt | cut -f 1,2,3,4,5,7 > tdata3.txt  
+
+tdata <- read_tsv("tdata3.txt")
 studychoices=unique(tdata$Study)
 groupchoices=unique(tdata$Group)
 
 
 ui <- fluidPage(
-  
-  
-  titlePanel("Survival Analysis"),
-  selectInput(inputId = "studyselector",label="Select a Clinical Study:", choices=studychoices),
-  selectInput(inputId = "groupselector",label="Select a Biomarker Group:", choices=groupchoices),
-  plotOutput("p1")
-  
+  titlePanel(h1("Patient Biomarker Survival Analysis in a Shiny App",
+             br(),
+             h3("Created by Jeffrey Long - Bioinformatics Scientist"),
+             h4("For demonstration purposes only. This app contains toy data.")
+             )),
+  mainPanel(
+    
+    # Output: Tabset w/ data table and KM plot ----
+    tabsetPanel(type = "tabs",
+                tabPanel("Kaplan-Meier", 
+                         selectInput(inputId = "studyselector",label="Select a Clinical Study:", choices=studychoices),
+                         selectInput(inputId = "groupselector",label="Select a Biomarker Group:", choices=groupchoices),
+                         plotOutput("kmplot")
+                         ),
+                tabPanel("Data Table", DT::dataTableOutput("datatable")),
+                tabPanel("Summary", verbatimTextOutput("summary"))
+    )
+  )
 )
 
 # Define server logic
@@ -32,7 +47,16 @@ server <- function(input, output) {
     return(filteredData)
   })
   
-  output$p1=renderPlot({
+  output$datatable <- DT::renderDataTable({
+    DT::datatable(tdata, options = list(orderClasses = TRUE))
+  })
+  
+
+  output$summary <- renderPrint({
+    summary(tdata)
+  })
+  
+  output$kmplot=renderPlot({
     fit=survfit(Surv(Time,Censored)~Group,data=filter())
     ggsurvplot(fit,data=filter(),pval=TRUE,xlim=c(0,max(filter()$Time)+1),
                title=paste("Study",input$studyselector, "Kaplan Meier Curve for Biomarker Group",input$groupselector),
