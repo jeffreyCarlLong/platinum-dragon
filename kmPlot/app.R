@@ -6,7 +6,7 @@ library(dplyr)
 # install.packages("RcppArmadillo")
 library(RcppArmadillo)
 
-tdata <- read_tsv("tdata.txt")
+tdata <- read_tsv("tdata2.txt")
 studychoices=unique(tdata$Study)
 groupchoices=unique(tdata$Group)
 
