@@ -7,10 +7,17 @@ library(dplyr)
 library(RcppArmadillo)
 library(DT)
 
-# bash script to cut column 6
-# cat tdata2.txt | cut -f 1,2,3,4,5,7 > tdata3.txt  
+# # bash script to cut column 6
+# cat tdata4.txt | cut -f 2,3,4,5,6 > tdata5.txt  
+# # bash script to generate universally unique identifier
+# alias uuid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+# for ((i=1; i<=107; i++))
+# do
+# uuid
+# done
 
-tdata <- read_tsv("tdata3.txt")
+
+tdata <- read_tsv("tdata5.txt")
 studychoices=unique(tdata$Study)
 groupchoices=unique(tdata$Group)
 
