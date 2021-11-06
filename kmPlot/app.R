@@ -42,7 +42,7 @@ ui <- fluidPage(
     ),
     # Footer
     hr(),
-    h5("For demonstration purposes only. This app contains randomly generated data.")
+    h5("This app contains randomly generated data and is for demonstration purposes only.")
   )
 )
 
