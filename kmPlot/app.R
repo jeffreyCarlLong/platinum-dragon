@@ -23,10 +23,11 @@ groupchoices=unique(tdata$Group)
 
 
 ui <- fluidPage(
-  titlePanel(h1("Patient Biomarker Survival Analysis in a Shiny App",
-             br(),
-             h3("Created November 2021 by Jeffrey Long - Bioinformatics Scientist")
-             )),
+  titlePanel(title="Patient Survival by Biomarker Subgroup"),
+  headerPanel(h3("Created November 2021",
+              br(),
+              h4("by Jeffrey Long"),
+              h4("Bioinformatics Scientist"))),
   mainPanel(
     
     # Output: Tabset w/ data table and KM plot ----
@@ -41,7 +42,7 @@ ui <- fluidPage(
     ),
     # Footer
     hr(),
-    h5("For demonstration purposes only. This app contains toy data.")
+    h5("For demonstration purposes only. This app contains randomly generated data.")
   )
 )
 
