@@ -70,7 +70,7 @@ server <- function(input, output) {
     fit=survfit(Surv(Time,Censored)~Group,data=filter())
     ggsurvplot(fit,data=filter(),pval=TRUE,xlim=c(0,max(filter()$Time)+1),
                title=paste("Study",input$studyselector, "Kaplan Meier Curve for Biomarker Group",input$groupselector),
-               xlab="Time (Days)",
+               xlab="Time (Months)",
                ggtheme=theme(plot.title=element_text(hjust=0.5)))
   })
   
