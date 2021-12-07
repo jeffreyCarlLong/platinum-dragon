@@ -2,6 +2,7 @@
 
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
+**Population genetics and genomics in R** | VCF Analysis | [Grunwald Lab](https://grunwaldlab.github.io/Population_Genetics_in_R/analysis_of_genome.html)
 **R tidymodels** | R Machine Learning Framework from Hadley Wickham | [tidymodels](https://www.tidymodels.org/start/models/)
 **easystats: Quickly investigate model performance** | Inspiration to learn tidymodels | [R Bloggers](https://www.r-bloggers.com/2021/07/easystats-quickly-investigate-model-performance/)
 **Mixing centered and non-centered parameterizations in a hierarchical model with PyMC3** | Hierarchical models | [Joshua Cook](https://joshuacook.netlify.app/post/mixed-parameterization-hierarchical-model/)
