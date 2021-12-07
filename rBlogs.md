@@ -2,7 +2,7 @@
 
 Title  |  Details |  Source
 -------------------------------  |  ----------------------------  | ------------------------------
-**VIVA (VIsualization of VAriants): A VCF File  Visualization Tool** | A pipeline for VCF Analysis | [Tollefson 2019 Nature](https://www.nature.com/articles/s41598-019-49114-z)
+**VIVA (VIsualization of VAriants): A VCF File  Visualization Tool** | A pipeline for VCF Analysis written in Julia, build failing in GitHub | [Tollefson 2019 Nature](https://www.nature.com/articles/s41598-019-49114-z)
 **Population genetics and genomics in R** | VCF Analysis | [Grunwald Lab](https://grunwaldlab.github.io/Population_Genetics_in_R/analysis_of_genome.html)
 **R tidymodels** | R Machine Learning Framework from Hadley Wickham | [tidymodels](https://www.tidymodels.org/start/models/)
 **easystats: Quickly investigate model performance** | Inspiration to learn tidymodels | [R Bloggers](https://www.r-bloggers.com/2021/07/easystats-quickly-investigate-model-performance/)
