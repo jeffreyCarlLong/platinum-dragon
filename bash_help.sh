@@ -1,6 +1,3 @@
-## Unix Help
-
-```{bash}
 FILES="file1
 file2
 file3"
@@ -25,5 +22,4 @@ awk '{print $1,$5,$10}' *.txt > my.data.txt
 
 # Unzip all archives in a dir
 find . -name '*.zip' -exec sh -c 'unzip -d `dirname {}` {}' ';'
-```
 
